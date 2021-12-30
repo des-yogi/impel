@@ -1,8 +1,76 @@
-// В этом файле должны быть стили для БЭМ-блока page-header, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .page-header {
+  position: relative;
+  z-index: 15;
+  // padding-bottom: 82px;
+
+  // @media (min-width: $screen-md) {
+  //   padding-bottom: 110px;
+  // }
+
+  // @media (min-width: $screen-xxl) {
+  //   padding-bottom: 0;
+  // }
 
   $block-name:                &; // #{$block-name}__element
+
+  &__top {
+
+    @media (max-width: $screen-xxl - 1) {
+      display: none;
+    }
+
+    #{$block-name}__main-service {
+      margin-left: 227px;
+    }
+  }
+
+  &__top-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  &__main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 82px;
+    background-color: $block-bg;
+    border-bottom: 2px solid $white;
+
+    @media (min-width: $screen-md) {
+      height: 110px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      justify-content: initial;
+      height: 114px;
+    }
+
+    .logo {
+
+      @media (min-width: $screen-xxl) {
+        margin-right: 64px;
+      }
+    }
+
+    #{$block-name}__main-service {
+      margin-left: auto;
+      margin-right: 48px;
+
+      @media (max-width: $screen-md - 1) {
+        display: none;
+      }
+
+      @media (min-width: $screen-xxl) {
+        display: none;
+      }
+    }
+  }
+
+  &__main-service {
+    display: flex;
+    align-items: center;
+  }
 }

@@ -1,4 +1,3 @@
-
 // Make viewport great again (responsive)
 // http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
 @at-root {
@@ -46,7 +45,7 @@ body {
   // Типографика проекта — в блоке typo
   display: flex;           // Исправляем баг в IE для min-height and flexbox (flex-direction:column)
   flex-direction: column;  // и прижимаем footer в IE 10-11
-  background-color: #fff;
+  background-color: $body-bg;
   margin: 0;
   min-height: 100%;
 }
@@ -144,9 +143,9 @@ img {
 }
 
 a {
-  color: $link-color;
+  color: currentColor;
   background-color: transparent;
-  transition: color 0.3s;
+  transition: color $transition-time;
 
   &:hover,
   &:focus {
@@ -158,15 +157,15 @@ a {
   // }
 
   // На больших экранах телефоны-ссылки делаем обычным текстом (если надо)
-  &[href^="tel:"] {
+  /* &[href^="tel:"] {
 
-    /* @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xl) {
       white-space: nowrap;
       pointer-events: none;
       text-decoration: inherit;
       color: inherit;
-    } */
-  }
+    }
+  } */
 }
 
 // BS4 Хелперы для BS4 табов и т.п.
@@ -269,36 +268,50 @@ a {
 .container {
   display: block;
   width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
   background: none;
 
-  @media (min-width: $screen-md) {
-    padding-left: 15px;
-    padding-right: 15px;
+  @media (min-width: $screen-sm) {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
-  @media (min-width: $screen-xl) {
-    $padding-min: 15px; // нужный отступ от краев экрана
-    $half-screen-xl: $screen-xl / 2 - $padding-min;
-    // padding: 1em calc(50% - 600px); //600px - это $screen-xl / 2 - нужный отступ от края экрана
-    padding-left: calc(50% - #{$half-screen-xl});
-    padding-right: calc(50% - #{$half-screen-xl});
+  @media (min-width: $screen-md) {
+    padding-left: 48px;
+    padding-right: 48px;
   }
+
+  @media (min-width: $screen-xxl) {
+    $padding-min: 48px; // нужный отступ от краев экрана
+    $half-screen-xxl: $screen-xxl / 2 - $padding-min;
+    // padding: 1em calc(50% - 600px); //600px - это $screen-xl / 2 - нужный отступ от края экрана
+    padding-left: calc(50% - #{$half-screen-xxl});
+    padding-right: calc(50% - #{$half-screen-xxl});
+  }
+}
+
+.container-full {
+  display: block;
+  width: 100%;
+
+  &--left-padding {}
+
+  &--right-padding {}
 }
 
 // Родитель. Указаны промежутки между ячейками: XS|SM|MD|LG|XL|XXL;
 // @include row($grid-gutter-width, 10px, 12px, 16px, 20px, 26px);
-// .row {
-//   @include row(
-//     $xs-grid-gutter:  20px,
-//     $sm-grid-gutter:  20px,
-//     $md-grid-gutter:  $grid-gutter-width,
-//     $lg-grid-gutter:  $grid-gutter-width,
-//     $xl-grid-gutter:  $grid-gutter-width,
-//     $xxl-grid-gutter: $grid-gutter-width
-//   );
-// }
+.row {
+  @include row(
+    $xs-grid-gutter:  $grid-gutter-width,
+    $sm-grid-gutter:  $grid-gutter-width,
+    $md-grid-gutter:  $grid-gutter-width,
+    $lg-grid-gutter:  $grid-gutter-width,
+    $xl-grid-gutter:  $grid-gutter-width,
+    $xxl-grid-gutter: $grid-gutter-width
+  );
+}
 
 /* &__element {
   @include col(); // малые ширины — 12 из 12, промежутки по умолчанию
@@ -310,7 +323,8 @@ a {
 } */
 
 
-// background: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
+// background-image: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color);
+//  background-image: svg-load('../blocks/sprite-svg/svg/phone.svg', fill=$main-color);
 
 * {
   //Firefox only
@@ -330,15 +344,15 @@ a {
 
   /* полоса прокрутки (скроллбар) */
   ::-webkit-scrollbar {
-      width: 6px; /* ширина для вертикального скролла */
-      height: 6px; /* высота для горизонтального скролла */
+      width: 8px; /* ширина для вертикального скролла */
+      height: 8px; /* высота для горизонтального скролла */
       background-color: $divider-color;
   }
 
   /* ползунок скроллбара */
   ::-webkit-scrollbar-thumb {
     background-color: $main-color;
-    border-radius: 8px;
+    border-radius: 1px;
     box-shadow: none;
     //box-shadow: inset 1px 1px 10px #f3faf7;
   }
@@ -353,5 +367,150 @@ a {
 
   &::-webkit-scrollbar {
     display: none;
+  }
+}
+
+.display {
+
+  @media (max-width: $screen-md) {
+    font-size: 27px;
+  }
+
+  span {
+    display: block;
+    text-transform: uppercase;
+
+    // @media (min-width: $menu-desktop-width) {
+    //   font-size: $font-size--display;
+    // }
+  }
+}
+
+//swiper
+.swiper-lazy-preloader {
+  border-color: $main-color !important;
+}
+
+.services-slider__button-prev,
+.services-slider__button-next {
+  top: unset;
+  bottom: 10px;
+  width: 32px;
+  height: 32px;
+  color: $main-color;
+  background-color: $white;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background-color: $block-bg;
+  }
+
+  @media (min-width: $screen-md) {
+    width: 48px;
+    height: 48px;
+  }
+
+  @media (min-width: $screen-xl) {
+    top: 50%;
+    bottom: unset;
+  }
+
+  @media (min-width: $screen-xxl) {
+    width: 72px;
+    height: 72px;
+  }
+
+  &::after {
+    font-size: 12px;
+    font-weight: 700;
+
+    @media (min-width: $screen-md) {
+      font-size: 18px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      font-size: 22px;
+    }
+  }
+}
+
+.services-slider__button-prev {
+  left: 26px;
+
+  @media (min-width: $screen-sm) {
+    left: 34px;
+  }
+
+  @media (min-width: $screen-md) {
+    left: 58px;
+  }
+
+  @media (min-width: $screen-xl) {
+    left: 48px;
+  }
+
+  @media (min-width: 1920px) {
+    left: 96px;
+  }
+}
+
+.services-slider__button-next {
+  right: 26px;
+
+  @media (min-width: $screen-sm) {
+    right: 34px;
+  }
+
+  @media (min-width: $screen-md) {
+    right: 58px;
+  }
+
+  @media (min-width: $screen-xl) {
+    right: 48px;
+  }
+
+  @media (min-width: 1920px) {
+    right: 96px;
+  }
+}
+
+.publishedon {
+  padding-left: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  color: inherit;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 22px;
+  background-image: svg-load('../blocks/sprite-svg/svg/calendar-icon.svg', fill=$text-color);
+
+  @media (min-width: $screen-sm) {
+    font-size: 16px;
+  }
+}
+
+.tel-link {
+  display: inline-flex;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  font-weight: 500;
+  text-decoration: none;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-image: svg-load('../blocks/sprite-svg/svg/call-icon.svg', fill=$text-color);
   }
 }

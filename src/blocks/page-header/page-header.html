@@ -6,6 +6,102 @@
 
 -->
 
-<header class="page-header" role="banner">
-  page-header
+<header class="page-header">
+  <div class="container  page-header__top">
+    <div class="page-header__top-inner">
+      <div class="page-header__main-service">
+        <a href="tel:+380681909111" class="tel-link" style="margin-right: 48px;">
+          <span>+38 068 190 91 11</span>
+        </a>
+        @@include('../../blocks/lang-switcher/lang-switcher.html', {
+          "id": "topLang",
+          "offsetY": "8"
+        })
+      </div>
+      <a href="#" class="btn  btn--fill">Кабінет клієнта</a>
+    </div>
+  </div>
+  <div class="page-header__main">
+
+    <div class="container page-header__main-content">
+      @@include('../../blocks/logo/logo.html')
+      @@include('../../blocks/main-nav/main-nav.html')
+      <div class="page-header__main-service">
+        <a href="tel:+380681909111" class="tel-link" style="margin-right: 48px;">
+          <span>+38 068 190 91 11</span>
+        </a>
+        @@include('../../blocks/lang-switcher/lang-switcher.html', {
+          "id": "mainLang",
+          "offsetY": "28"
+        })
+      </div>
+      <button id="main-nav-toggler" class="burger"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseMenuMob"
+              aria-expanded="false"
+              aria-controls="collapseMenuMob"
+              aria-label="Переключатель моб. меню"
+      ><span></span></button>
+    </div>
+
+    <nav id="collapseMenuMob" class="container  mob-nav  collapse">
+      <div class="mob-nav__service-menu">
+        <a href="tel:+380681909111" class="tel-link">
+          <span>+38 068 190 91 11</span>
+        </a>
+        <ul class="list-nostyled mob-nav__lang" aria-label="Доступные языки">
+          <li class="active"><a>Укр</a></li>
+          <li><a href="#">Рус</a></li>
+          <li><a href="#">Англ</a></li>
+        </ul>
+        <a href="#" class="btn  btn--fill">Кабінет клієнта</a>
+      </div>
+      <ul class="list-nostyled  mob-nav__list">
+        <li class="mob-nav__list-item  active">
+          <a href="#">Головна</a>
+        </li>
+        <li class="mob-nav__list-item  has-child">
+          <div class="mob-nav__link-wrapper">
+            <a href="#">Послуги</a>
+            <button class="mob-nav__submenu-toggle"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapseItemMenu-1"
+                    aria-expanded="false"
+                    aria-controls="collapseItemMenu-1"
+            >
+              <span class="visually-hidden">Открыть подменю</span>
+            </button>
+          </div>
+          <ul id="collapseItemMenu-1" class="list-nostyled  mob-nav__sub-list collapse">
+            <li class="mob-nav__list-item">
+              <a href="#">Клінінг</a>
+            </li>
+            <li class="mob-nav__list-item">
+              <a href="#">Технічне обслуговування</a>
+            </li>
+            <li class="mob-nav__list-item  active">
+              <a>Обслуговування медичних закладів</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mob-nav__list-item">
+          <a href="#">Наші проекти</a>
+        </li>
+        <li class="mob-nav__list-item">
+          <a href="#">Про нас</a>
+        </li>
+        <li class="mob-nav__list-item">
+          <a href="#">Новини</a>
+        </li>
+        <li class="mob-nav__list-item">
+          <a href="#">FAQ</a>
+        </li>
+        <li class="mob-nav__list-item">
+          <a href="#">Контакти</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>

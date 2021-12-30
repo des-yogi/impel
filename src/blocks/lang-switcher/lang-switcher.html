@@ -1,18 +1,17 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/lang-switcher/lang-switcher.html')
+-->
 
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-<div class="lang-switcher  dropdown" id="lang-switcher">
-  <button class="dropdown-toggle" type="button" id="lang-switcher-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RU</button>
-  <div class="dropdown-menu" aria-labelledby="lang-switcher">
-    <a class="dropdown-item" href="#">UA</a>
-    <a class="dropdown-item" href="#">RU</a>
+<div class="lang-switcher  dropdown">
+  <button id="@@id" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" data-offset="0,@@offsetY">
+    <svg width="19.5" height="19.5"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#globe-icon"></use></svg>
+    <span>
+      <span class="visually-hidden">Текущий язык</span>
+      Укр
+    </span>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="@@id">
+    <a class="dropdown-item" href="#">Рус</a>
+    <a class="dropdown-item" href="#">Англ</a>
   </div>
 </div>
-
--->

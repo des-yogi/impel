@@ -62,21 +62,6 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 //   // code
 // }());
 
-// На проекте нет jQuery, но хочется $( document ).ready...
-// function ready(fn) {
-//   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
-//     fn();
-//   } else {
-//     document.addEventListener('DOMContentLoaded', fn);
-//   }
-// }
-//
-// ready(function(){
-//   // code
-// });
-
-
-
 // $(document).ready(function(){
 //   if(window.matchMedia('(min-width: 1366px)').matches){
 //   // do functionality on screens bigger than 1366px
@@ -103,3 +88,11 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     agreementCheckbox.addEventListener('change', agreementHandler);
   }
 })(); */
+
+(function(){
+  const sticky = new Sticky('.page-header__main');
+
+  const bLazy = new Blazy({
+    selector: '.b-lazy' // all images
+  });
+}());

@@ -1,0 +1,83 @@
+.services-slider {
+  position: relative;
+  background-color: $block-bg;
+
+  $block-name:                &; // #{$block-name}__element
+
+  .swiper-slide {
+    box-sizing: border-box;
+  }
+
+  &__col-text {
+    @include col(xs, 12);
+    @include col(xl, 6);
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    @media (min-width: $screen-xxl) {
+      padding-top: 96px;
+      padding-bottom: 96px;
+    }
+  }
+
+  &__col-img {
+    @include col(xs, 12);
+    @include col(xl, 6);
+    position: relative;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+
+      @media (min-width: $screen-xl) {
+        display: block;
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        bottom: 0;
+        width: 16px;
+        height: 100%;
+        background-color: $white;
+      }
+    }
+
+    &::before {
+
+      @media (min-width: $screen-xl) {
+        left: 10px;
+      }
+    }
+
+    &::after {
+
+      @media (min-width: $screen-xl) {
+        right: 10px;
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__col-inner {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+  }
+
+  &__slide-title {
+    margin-top: 0;
+  }
+
+  &__slide-descr {
+    margin-bottom: 32px;
+  }
+}

@@ -1,0 +1,11 @@
+.projects {
+
+  $block-name:                &; // #{$block-name}__element
+
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    margin-bottom: 24px;
+  }
+}

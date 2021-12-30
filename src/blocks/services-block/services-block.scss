@@ -1,0 +1,30 @@
+.services-block {
+  margin-bottom: 48px;
+  //background-color: $block-bg;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__text {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+    @include col-offset(xxl, 3);
+    @include col(xxl, 6);
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 4);
+    margin-bottom: 24px;
+  }
+}

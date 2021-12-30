@@ -1,0 +1,22 @@
+<!--DEV
+@ @include('blocks/project-item/project-item.html')
+@@title
+-->
+<article class="project-item">
+  <div class="embed-responsive  project-item__img">
+    <picture>
+      <source data-srcset="img/project-img.webp" media="(min-width: 1200px)" type="image/webp">
+      <source data-srcset="img/project-img.jpg" media="(min-width: 1200px)">
+        <!-- 1200 ->  (625x352) -->
+      <source data-srcset="img/project-img.webp" media="(min-width: 480px)" type="image/webp">
+      <source data-srcset="img/project-img.jpg" media="(min-width: 480px)">
+        <!-- 480 -> 1208 (720x405) -->
+      <source data-srcset="img/project-img.webp" type="image/webp">
+      <img class="b-lazy" data-src="img/project-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="680" height="383" alt="Описание">
+    </picture>
+  </div>
+  <div class="project-item__text">
+    <h3 class="project-item__title">@@title</h3>
+    <a href="#" class="btn  btn--link">Детальніше</a>
+  </div>
+</article>
