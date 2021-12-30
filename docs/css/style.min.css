@@ -128,17 +128,17 @@ button.swiper-pagination-bullet{border:none;margin:0;padding:0;-webkit-box-shado
     vertical-align:baseline;
     max-width:100%;
     margin-right:0.6em;
-    margin-bottom:0.5em;
+    margin-bottom:0.4em;
     overflow:hidden;
     text-overflow:ellipsis; }
 .breadcrumbs__item:not(:last-child)::after{
       content:'›';
       display:inline-block;
-      margin-left:0.8em;
+      margin-left:0.6em;
       font-weight:600;
-      color:#6b6579;
-      -webkit-transform:scale(1.3);
-              transform:scale(1.3); }
+      font-size:20px;
+      line-height:26px;
+      color:#6b6579; }
 .breadcrumbs__item:last-child .breadcrumbs__link{
       text-decoration:none;
       color:#040931; }
