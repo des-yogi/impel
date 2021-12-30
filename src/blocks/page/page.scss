@@ -514,3 +514,18 @@ a {
     background-image: svg-load('../blocks/sprite-svg/svg/call-icon.svg', fill=$text-color);
   }
 }
+
+.text-page {
+  padding-bottom: 48px;
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 72px;
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 8);
+    @include col(xxl, 7);
+  }
+}

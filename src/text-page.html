@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home page</title>
+  @@include('_include/page_head.html')
+  <style>
+    .main-content { margin-top: 82px; }
+    @media (min-width: 768px) { .main-content { margin-top: 110px; }}
+    @media (min-width: 1366px) { .main-content { margin-top: 0; }}
+  </style>
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <div class="main-content">
+
+        @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+        <main>
+          <article class="container  text-page">
+            <div class="row">
+              <div class="text-page__col">
+                <!-- [[*content]] -->
+                <h1>Заголовок H1</h1>
+                <p>У дискусії під назвою «Безпека пацієнтів і персоналу», модератором якої стала Олександра Куровська з cowzdrowiu.pl, Групу Impel представлятиме Ельжбета Кантович, комерційний директор групи продуктів Impel Catering.</p>
+                <h2>Заголовок H2</h2>
+                <p>У дискусії під назвою «Безпека пацієнтів і персоналу», модератором якої стала Олександра Куровська з cowzdrowiu.pl, Групу Impel представлятиме Ельжбета Кантович, комерційний директор групи продуктів Impel Catering.</p>
+                <h3>Заголовок H3</h3>
+                <p>У дискусії під назвою «Безпека пацієнтів і персоналу», модератором якої стала Олександра Куровська з cowzdrowiu.pl, Групу Impel представлятиме Ельжбета Кантович, комерційний директор групи продуктів Impel Catering.</p>
+                <h4>Заголовок H4</h4>
+                <p>У дискусії під назвою «Безпека пацієнтів і персоналу», модератором якої стала Олександра Куровська з cowzdrowiu.pl, Групу Impel представлятиме Ельжбета Кантович, комерційний директор групи продуктів Impel Catering.</p>
+
+              </div>
+            </div>
+          </article>
+        </main>
+
+      </div>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

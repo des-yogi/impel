@@ -1,0 +1,134 @@
+.login-form {
+  padding-bottom: 48px;
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 72px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    @include row(
+      $xs-grid-gutter:  32px,
+      $sm-grid-gutter:  48px,
+      $md-grid-gutter:  $grid-gutter-width,
+      $lg-grid-gutter:  $grid-gutter-width,
+      $xl-grid-gutter:  $grid-gutter-width,
+      $xxl-grid-gutter: $grid-gutter-width
+    );
+
+    &--top {
+      color: $white;
+      background-color: $main-color;
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+      overflow: hidden;
+
+      @media (min-width: $screen-md) {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 32px); //
+    @include col(sm, 12, $grid-columns, 48px); //, $grid-columns, 48px
+    @include col(md, 12);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+    @include col-offset(xxl, 3);
+    @include col(xxl, 6);
+
+    &--bottom {
+
+      @media (max-width: $screen-md - 1) {
+        padding-bottom: 48px;
+        border-bottom: 1px solid $border-color;
+      }
+    }
+  }
+
+  &__col-inner {
+    @include col(xs, 12);
+    @include col-offset(md, 2);
+    @include col(md, 8);
+  }
+
+  &__container {
+
+    &--top {
+
+      @media (min-width: $screen-md) {
+        background-color: $main-color;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        overflow: hidden;
+      }
+    }
+
+    &--bottom {
+
+      @media (min-width: $screen-md) {
+        padding-bottom: 48px;
+        border: 1px solid $border-color;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
+    }
+  }
+
+  &__caption {
+    padding: 24px 0;
+
+    p {
+      margin-top: 8px;
+
+      &:first-child {
+        margin: 0 0 8px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+
+    a {
+      color: currentColor;
+    }
+  }
+
+  &__form {
+
+  }
+
+  &__form-title {
+    margin-top: 48px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 64px;
+    }
+  }
+
+  &__restore {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  &__restore-link {
+    text-decoration: none;
+    color: $main-color;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &__submit-wrapper {
+    margin-top: 32px;
+
+    .btn {
+      width: 100%;
+    }
+  }
+}

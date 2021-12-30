@@ -1,0 +1,38 @@
+.service-description {
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+
+  &__col-left {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 6);
+
+    @media (max-width: $screen-xl - 1) {
+      margin-bottom: 72px;
+    }
+
+    *:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__col-right {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col-offset(xl, 1);
+    @include col(xl, 5);
+    @include col(xxl, 4);
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+}

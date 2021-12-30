@@ -63,6 +63,19 @@
     &.btn--disabled {
       background-image: svg-load('../blocks/sprite-svg/svg/btn-arrow-icon.svg', fill=$text-muted);
     }
+
+    &--fill {
+      color: $white;
+      background-color: $main-color;
+      background-image: svg-load('../blocks/sprite-svg/svg/btn-arrow-icon.svg', fill=$white);
+
+      &:hover,
+      &:focus {
+        color: $white;
+        background-color: $main-color--active;
+        border-color: $main-color--active;
+      }
+    }
   }
 
   &--link {
@@ -98,13 +111,6 @@
       border-color: $main-color--active;
     }
   }
-
-  // &__icon {
-  //   display: inline-block;
-  //   vertical-align: middle;
-  // }
-
-
 
   // &--main {
   //   color: #fff;
