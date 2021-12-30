@@ -15,6 +15,9 @@
 @import './src/blocks/dropdown/dropdown.scss';
 @import './src/blocks/embed-responsive/embed-responsive.scss';
 @import './src/blocks/field-actions/field-actions.scss';
+@import './src/blocks/field-checkbox/field-checkbox.scss';
+@import './src/blocks/field-radio/field-radio.scss';
+@import './src/blocks/field-text/field-text.scss';
 @import './src/blocks/form/form.scss';
 @import './src/blocks/lang-switcher/lang-switcher.scss';
 @import './src/blocks/logo/logo.scss';
@@ -42,4 +45,11 @@
 @import './src/blocks/projects/projects.scss';
 @import './src/blocks/project-item/project-item.scss';
 @import './src/blocks/seo-text/seo-text.scss';
+@import './src/blocks/service-banner/service-banner.scss';
+@import './src/blocks/service-about/service-about.scss';
+@import './src/blocks/service-benefits/service-benefits.scss';
+@import './src/blocks/service-difference/service-difference.scss';
+@import './src/blocks/faq-block/faq-block.scss';
+@import './src/blocks/service-description/service-description.scss';
+@import './src/blocks/login-form/login-form.scss';
 @import './src/scss/print.scss';

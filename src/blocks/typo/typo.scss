@@ -138,6 +138,10 @@ figure {
   & + & {
     margin-top: 1em;
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 address {

@@ -8,6 +8,9 @@
     "dropdown": [],
     "embed-responsive": [],
     "field-actions": [],
+    "field-checkbox": [],
+    "field-radio": [],
+    "field-text": [],
     "form": [],
     "lang-switcher": [],
     "logo": [],
@@ -34,7 +37,14 @@
     "mob-nav": [],
     "projects": [],
     "project-item": [],
-    "seo-text": []
+    "seo-text": [],
+    "service-banner": [],
+    "service-about": [],
+    "service-benefits": [],
+    "service-difference": [],
+    "faq-block": [],
+    "service-description": [],
+    "login-form": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
