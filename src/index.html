@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
 
 <head>
   <meta charset="utf-8">
   <title>Home page</title>
   @@include('_include/page_head.html')
+  <style>
+    .main-content { margin-top: 82px; }
+    @media (min-width: 768px) { .main-content { margin-top: 110px; }}
+    @media (min-width: 1366px) { .main-content { margin-top: 0; }}
+  </style>
 </head>
 
 <body>
@@ -15,10 +20,208 @@
     <div class="page__content">
       @@include('blocks/page-header/page-header.html')
 
-      <main role="main">
+      <main class="main-content">
 
-        <div class="container">
+        @@include('blocks/hero/hero.html')
 
+        <section class="container  benefits">
+          <h2 class="benefits__title">Facestiusciis autem facimus</h2>
+          <div class="row">
+            <div class="benefits__inner">
+              <div class="row">
+
+                <div class="benefits__item">
+                  <span class="benefits__icon">
+                    <img src="img/target.svg" alt="Богатый опыт" width="65" height="65">
+                  </span>
+                  <h3>30 років досвіду</h3>
+                  <p>Damenihit as re arum as vendi volore volendisque pelitatia doleseq uibearit explab il is utem re voluptas consequas</p>
+                </div>
+
+                <div class="benefits__item">
+                  <span class="benefits__icon">
+                    <img src="img/clients.svg" alt="Богатый опыт" width="64" height="50">
+                  </span>
+                  <h3>Більше 6 000 клієнтів</h3>
+                  <p>Damenihit as re arum as vendi volores</p>
+                </div>
+
+                <div class="benefits__item">
+                  <span class="benefits__icon">
+                    <img src="img/users.svg" alt="Богатый опыт" width="64" height="59">
+                  </span>
+                  <h3>50 000</h3>
+                  <p>Damenihit as re arum as vendi volore volendisque pelitatia doleseq uibearit explab il is utem re voluptas consequas</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="container  services-slider">
+          <div class="swiper  services-slider__swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="row">
+                  <div class="services-slider__col-text">
+                    <div class="row">
+                      <div class="services-slider__col-inner">
+                        <h2 class="services-slider__slide-title">Комплексне підтримання чистоти на об’єктах нерухомості</h2>
+                        <div class="services-slider__slide-descr">
+                          <p>Ми надаємо спеціалізовані послуги, індивідуально пристосовані до конкретних, часто дуже різноманітних та унікальних потреб.</p>
+                          <p>Наше обладнання, дозволи та ресурси не обмежують наших можливостей надання таких послуг.</p>
+                        </div>
+                        <a href="#" class="btn  btn--link">Детальніше</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="services-slider__col-img">
+                    <picture>
+                      <source data-srcset="img/service-slider-img.webp" media="(min-width: 1200px)" type="image/webp">
+                      <source data-srcset="img/service-slider-img.jpg" media="(min-width: 1200px)">
+                        <!-- 1200 -> (625x552) -->
+                      <source data-srcset="img/service-slider-img.webp" media="(min-width: 768px)" type="image/webp">
+                      <source data-srcset="img/service-slider-img.jpg" media="(min-width: 768px)">
+                        <!-- 768 -> 1200 (1100x770) -->
+                      <source data-srcset="img/service-slider-img.webp" media="(min-width: 480px)" type="image/webp">
+                      <source data-srcset="img/service-slider-img.jpg" media="(min-width: 480px)">
+                        <!-- 480 -> 768 (680x476) -->
+                      <source data-srcset="img/service-slider-img.webp" type="image/webp">
+                      <img data-src="img/service-slider-img.jpg" class="swiper-lazy" alt="Слайд" width="645" height="450">
+                    </picture>
+                  </div>
+                </div>
+                <div class="swiper-lazy-preloader"></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="services-slider__controls">
+            <div class="services-slider__button-prev swiper-button-prev"></div>
+            <div class="services-slider__button-next swiper-button-next"></div>
+          </div>
+        </section>
+
+        <section class="container  promo-video">
+          <div class="row">
+            <div class="promo-video__col">
+              <div class="promo-video__text">
+                <h2 class="promo-video__title">
+                  <span>Відкрийте для себе IMPELCITY</span>
+                  Світ послуг Групи Impel
+                </h2>
+                <div>
+                  <p>Откройте для себя возможности Группы Impel. <br>
+                  Познакомьтесь с ImpelCity, городом, где услуги и продукты Группы Impel помогают жить комфортно и безопасно каждый день. Это город, которого нет на карте, но вы можете легко найти его в комплексном бизнес-предложении Impel.</p>
+                </div>
+              </div>
+              <div class="embed-responsive promo-video__video">
+                <iframe title="Название видеоролика" class="b-lazy" data-src="https://www.youtube.com/embed/B0Q1rKpDNE4" style="border:none;" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div style="padding:72px 0 48px;background-color: #f1f1f5;">
+
+          <section class="container  services-block">
+
+            <div class="row">
+              <div class="services-block__text">
+                <h2 class="services-block__title">Наші послуги</h2>
+                <p class="services-block__intro">Ми пов'язуємо потреби вашого бізнесу із нашими рішеннями. Саме тому ми постійно розвиваємо портфель доступних вам послуг. Дізнайтеся більше.</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="services-block__col">
+                @@include('blocks/service-item/service-item.html', {
+                  "title": "Клінінг",
+                  "icon": "сleaning-black",
+                  "bgImg": "service-item-img",
+                  "bgColor": "linear-gradient(135deg, #199CDB 0%, #084B85 100%)"
+                })
+              </div>
+
+              <div class="services-block__col">
+                @@include('blocks/service-item/service-item.html', {
+                  "title": "Технічне обслуговування",
+                  "icon": "tech-black",
+                  "bgImg": "service-item-img",
+                  "bgColor": "linear-gradient(135deg, #7F7F7F 0%, #575757 100%)"
+                })
+              </div>
+
+              <div class="services-block__col">
+                @@include('blocks/service-item/service-item.html', {
+                  "title": "Обслуговування медичних закладів",
+                  "icon": "health-black",
+                  "bgImg": "service-item-img",
+                  "bgColor": "linear-gradient(135deg, #199CDB 0%, #084B85 100%)"
+                })
+              </div>
+
+              <div class="services-block__col">
+                @@include('blocks/service-item/service-item.html', {
+                  "title": "Клінінг",
+                  "icon": "сleaning-black",
+                  "bgImg": "service-item-img",
+                  "bgColor": "linear-gradient(135deg, #199CDB 0%, #084B85 100%)"
+                })
+              </div>
+            </div>
+          </section>
+
+          <section class="container  services-block  projects">
+
+            <div class="row">
+              <div class="services-block__text">
+                <h2 class="services-block__title">Наші проекти</h2>
+                <p class="services-block__intro">Ми пов'язуємо потреби вашого бізнесу із нашими рішеннями. Саме тому ми постійно розвиваємо портфель доступних вам послуг. Дізнайтеся більше.</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="projects__col">
+                @@include('blocks/project-item/project-item.html', {
+                  "title": "Київстар"
+                })
+              </div>
+              <div class="projects__col">
+                @@include('blocks/project-item/project-item.html', {
+                  "title": "КиївНеСтар"
+                })
+              </div>
+            </div>
+          </section>
+
+          <section class="container  last-news">
+            <h2 class="last-news__title">Останні новини</h2>
+
+            <div class="row">
+              <div class="last-news__col">
+                @@include('blocks/news-block/news-block.html', {
+                  "title": "Ми беремо участь у програмній конференції та 10-річному ювілеї Польської федерації лікарень",
+                  "img": "news-img"
+                })
+              </div>
+
+              <div class="last-news__col">
+                @@include('blocks/news-block/news-block.html', {
+                  "title": "Злиття компаній",
+                  "img": "news-img"
+                })
+              </div>
+
+              <div class="last-news__col">
+                @@include('blocks/news-block/news-block.html', {
+                  "title": "Посткоподібна терапія – поверніться до респіраторного здоров\'я!",
+                  "img": "news-img"
+                })
+              </div>
+            </div>
+          </section>
 
         </div>
 

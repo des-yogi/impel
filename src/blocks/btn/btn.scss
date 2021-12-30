@@ -1,36 +1,35 @@
-// В этом файле должны быть стили для БЭМ-блока btn, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .btn {
 
   $block-name:                &; // #{$block-name}__element
 
   box-sizing: border-box;
+  position: relative;
   display: inline-block;
+  min-width: 160px;
+  padding: $field-padding-vertical 32px;
   margin: 0;
-  // padding: $field-padding-vertical  $field-padding-horizontal;
   white-space: nowrap;
   vertical-align: middle;
-  user-select: none;
   text-align: center;
   font-size: 1em;
+  font-weight: 500;
   font-family: inherit;
   line-height: $line-height;
   text-decoration: none;
   text-transform: none;
-  color: $text-color;
-  border-radius: $border-radius;
-  border: 1px solid $gray-lighter;
-  background-color: $gray-lightest;
-  background-image: none;
+  border-radius: 32px;
+  border: 2px solid $main-color;
+  color: $main-color;
+  background-color: transparent;
+  user-select: none;
   cursor: pointer;
+  transition: background-color $transition-time;
 
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $text-color;
-    // background-color: darken($gray-lightest, 10%);
+    //color: $text-color;
+    background-color: rgba(222, 59, 80, 0.04);
     // border-color: darken($gray-lighter, 12%);
   }
 
@@ -43,12 +42,60 @@
   &:disabled {
     // opacity: $opacity;
     cursor: not-allowed;
-    color: $text-color;
+    color: $text-muted;
     background-color: $gray-lightest;
-    border-color: $gray-lighter;
+    border-color: $border-color;
 
     @at-root a.btn--disabled {
       pointer-events: none;
+    }
+  }
+
+  &--arrow {
+    min-width: 214px;
+    padding-right: 42px;
+    text-align: left;
+    background-position: right 18px center;
+    background-repeat: no-repeat;
+    background-size: 8px 14px;
+    background-image: svg-load('../blocks/sprite-svg/svg/btn-arrow-icon.svg', fill=$main-color);
+
+    &.btn--disabled {
+      background-image: svg-load('../blocks/sprite-svg/svg/btn-arrow-icon.svg', fill=$text-muted);
+    }
+  }
+
+  &--link {
+    position: static;
+    min-width: 50px;
+    padding: 0 36px 0 0;
+    text-align: left;
+    color: $text-color;
+    background-color: transparent;
+    background-position: right 14px center;
+    background-repeat: no-repeat;
+    background-size: 8px 14px;
+    background-image: svg-load('../blocks/sprite-svg/svg/btn-arrow-icon.svg', fill=$main-color);
+    border-radius: 0;
+    border: none;
+    transition: all $transition-time;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      background-position: right 4px center;
+    }
+  }
+
+  &--fill {
+    color: $white;
+    background-color: $main-color;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $main-color--active;
+      border-color: $main-color--active;
     }
   }
 

@@ -1,65 +1,78 @@
 .lang-switcher {
   //@include col(xs, 5, $grid-columns, 20px);
   //@include col(md, 2);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
+  height: 100%;
 
   @media (min-width: $screen-md) {
     display: inline-flex;
-    max-width: 90px;
+    //max-width: 90px;
     margin-left: 0;
   }
 
   $block-name:                &; // #{$block-name}__element
 
   .dropdown-toggle {
-    padding: 5px 10px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
     font-family: $font-family;
     font-size: $font-size;
     font-weight: 500;
-    text-transform: uppercase;
+    line-height: inherit;
+    //text-transform: uppercase;
     user-select: none;
     cursor: pointer;
     color: inherit;
-    background-color: $white;
+    background-color: transparent;
     border: none;
-    box-shadow: $shadow;
 
     &:hover,
     &:focus {
       color: $main-color;
+
+      &::after {
+        background-image: svg-load('../blocks/lang-switcher/bg-img/caret-down-icon.svg', fill=$main-color);
+      }
     }
+
+/*     &::after {
+      display: none;
+    } */
 
     &::after {
-      display: none;
-    }
-
-    &::before {
       display: inline-block;
       vertical-align: middle;
       content: "";
-      width: 16px;
-      height: 10px;
-      margin-right: 10px;
-      //background: svg-load('../blocks/sprite-svg/svg/bottom-arrow-s.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
-      background: svg-load('../blocks/lang-switcher/bg-img/bottom-arrow-s.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
+      width: 10px;
+      height: 6px;
+      margin-right: 0;
+      margin-left: 10px;
+      background-image: svg-load('../blocks/lang-switcher/bg-img/caret-down-icon.svg', fill=$text-color);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 100%;
+      background-size: 10px 6px;
+      border: none;
       transition: transform $transition-time ease-out;
     }
 
     &[aria-expanded=true] {
-      &::before {
-        transform: rotate(180deg) translateY(2px);
+      &::after {
+        transform: scale(1, -1); // translateY(2px)
+        background-image: svg-load('../blocks/lang-switcher/bg-img/caret-down-icon.svg', fill=$main-color);
       }
+    }
+
+    & > svg {
+      margin-right: 8px;
+      fill: $text-color;
     }
   }
 
   .dropdown-menu {
-    min-width: 65px;
+    min-width: 100%;
+    border: none;
   }
 
   .dropdown-item {
@@ -68,10 +81,12 @@
     font-weight: 500;
     padding-right: 5px;
     color: inherit;
+    text-decoration: none;
 
     &:hover,
     &:focus {
       color: $main-color;
+      background-color: $white;
     }
   }
   .dropdown-item + .dropdown-item {

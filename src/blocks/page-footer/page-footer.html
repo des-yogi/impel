@@ -1,11 +1,71 @@
 <!--DEV
-
-Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-footer/page-footer.html')
-
 -->
 
-<footer class="page-footer" role="contentinfo">
-  page-footer
+<footer class="container  page-footer">
+  <div class="row page-footer__main">
+    <div class="page-footer__logo-col">
+      @@include('../../blocks/logo/logo.html', {
+        "addClass": "logo--footer"
+      })
+    </div>
+
+    <div class="page-footer__menu-col">
+      <nav class="page-footer__menu">
+        <h4 class="h5  page-footer__block-title">Меню:</h4>
+        <ul class="list-nostyled page-footer__menu-list">
+          <li class="page-footer__menu-item  active">
+            <a href="#">Головна</a>
+          </li>
+          <li class="page-footer__menu-item">
+            <a href="#">Послуги</a>
+          </li>
+          <li class="page-footer__menu-item">
+            <a href="#">Про нас</a>
+          </li>
+          <li class="page-footer__menu-item">
+            <a href="#">Новини</a>
+          </li>
+          <li class="page-footer__menu-item">
+            <a href="#">FAQ</a>
+          </li>
+          <li class="page-footer__menu-item">
+            <a href="#">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="page-footer__address-col">
+      <section class="page-footer__address">
+        <h4 class="h5  page-footer__block-title">Адреса:</h4>
+        <p>Impel S.A.</p>
+        <p><span>ul. Ślężna 118</span></p>
+        <p><span>53-111</span> <span>Wrocław</span></p>
+      </section>
+    </div>
+
+    <div class="page-footer__tel-col">
+      <section class="page-footer__tel">
+        <h4 class="visually-hidden">Контактні телефони:</h4>
+        <a href="tel:+380681909111"><span>+38 068 190 91 11</span></a>
+        <a href="tel:+380681909111"><span>+38 068 190 91 11</span></a>
+      </section>
+    </div>
+
+    <div class="page-footer__social-col">
+      @@include('../../blocks/social-links/social-links.html')
+    </div>
+  </div>
+  <div class="row page-footer__bottom">
+    <div class="page-footer__copyrights-col">
+      <span>© Impel Group. Всі права захищені.</span>
+    </div>
+    <div class="page-footer__service-col">
+      <div class="page-footer__service">
+        <a href="#">Політика щодо файлів cookie</a>
+        <a href="#">Політика конфіденційності</a>
+      </div>
+    </div>
+  </div>
 </footer>

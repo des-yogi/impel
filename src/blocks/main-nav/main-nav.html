@@ -1,61 +1,22 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/main-nav/main-nav.html')
+-->
 
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<nav id="main-nav" class="main-nav" role="navigation">
-  <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
-  <ul class="main-nav__list">
-    <li class="main-nav__item  main-nav__item--active">
-      <a href="" class="main-nav__link">
-        Страницы
-      </a>
-      <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-2">
-        <ul class="main-nav__list  main-nav__list--lvl-2">
-          <li class="main-nav__item  main-nav__item--lvl-2">
-            <a href="" class="main-nav__link  main-nav__link--lvl-2">
-              Контакты
-            </a>
-          </li>
-          <li class="main-nav__item  main-nav__item--lvl-2">
-            <a href="" class="main-nav__link  main-nav__link--lvl-2">
-              Услуги
-            </a>
-            <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-3">
-              <ul class="main-nav__list  main-nav__list--lvl-3">
-                <li class="main-nav__item  main-nav__item--lvl-3">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                    Вёрстка HTML-CSS
-                  </a>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-3">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                    Стриптиз
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
+<nav class="menu  main-nav">
+  <ul>
+    <li><a href="#">Головна</a></li>
+    <li><a href="#">Послуги</a>
+      <ul>
+        <li class="active"><a href="#link1">Клінінг</a></li>
+        <li><a href="#link2">Технічне обслуговування</a></li>
+        <li><a href="#link3">Обслуговування медичних закладів</a></li>
+      </ul>
     </li>
-    <li class="main-nav__item">
-      <a href="https://github.com/nicothin/NTH-start-project" class="main-nav__link">
-        Репозиторий
-      </a>
-    </li>
-    <li class="main-nav__item">
-      <a href="http://nicothin.pro/" class="main-nav__link">
-        Сайт автора
-      </a>
-    </li>
+    <li><a href="#">Наші проекти</a></li>
+    <li><a href="#">Про нас</a></li>
+    <li><a href="#">Новини</a></li>
+    <li class="active"><a href="#">FAQ</a></li>
+    <li><a href="#">Контакти</a></li>
   </ul>
 </nav>
 
--->

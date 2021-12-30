@@ -1,0 +1,160 @@
+.mob-nav {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: $block-bg;
+
+  height: calc(100vh - 82px);
+  overflow-y: auto;
+  will-change: auto;
+
+  @media (min-width: $screen-md) {
+    height: calc(100vh - 110px);
+  }
+
+  @media (min-width: $screen-xxl) {
+    display: none;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  .tel-link,
+  #{$block-name}__lang {
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+
+  .tel-link {
+    margin-bottom: 10px;
+  }
+
+  &__service-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px;
+
+    & > * {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__lang {
+    display: inline-flex;
+    justify-content: center;
+    font-weight: 500;
+
+    li + li {
+      margin-left: 8px;
+    }
+
+    li {
+
+      &.active {
+
+        a {
+          color: $main-color;
+          pointer-events: none;
+        }
+      }
+    }
+
+    a {
+      display: inline-block;
+      vertical-align: baseline;
+      padding: 4px;
+      text-decoration: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__list-item {
+    width: 100%;
+    text-align: center;
+
+    & + & {
+      margin-top: 24px;
+    }
+
+    &.active {
+
+      a {
+        color: $main-color;
+        pointer-events: none;
+      }
+    }
+
+    a {
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    &.has-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__sub-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #{$block-name}__list-item + #{$block-name}__list-item {
+      margin-top: 8px ;
+    }
+
+    li {
+
+      &:first-child {
+        margin-top: 16px;
+      }
+    }
+
+    a {
+      font-weight: initial;
+    }
+  }
+
+  &__link-wrapper {
+    position: relative;
+    width: 100%;
+    padding-right: 60px;
+
+    a {
+      margin-left: 60px;
+    }
+  }
+
+  &__submenu-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: $white;
+    background-size: 10px 6px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: svg-load('../blocks/sprite-svg/svg/caret-down-icon.svg', fill=$main-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+
+    &[aria-expanded=true] {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.service-item {
+  position: relative;
+  height: 100%;
+  background-color: $white;
+  border-radius: $border-radius--xl;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+
+  @media (max-width: $screen-xl - 1) {
+    background-image: none !important;
+    //background-image: url(../img/service-item-img.jpg);
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  .btn--link {
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+
+      @media (min-width: $screen-xl) {
+        right: -65%;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    padding: 24px;
+    position: relative;
+    //max-width: 60%;
+    background-color: $white;
+
+    &::after {
+
+      @media (min-width: $screen-xl) {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -96px;
+        width: 96px;
+        background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      max-width: 60%;
+      padding-right: 0;
+    }
+  }
+
+  // &__text {
+
+  //   @media (min-width: $screen-xxl) {
+  //     position: relative;
+  //   }
+  // }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 24px;
+
+    img {
+      height: 48px;
+      width: auto;
+    }
+
+    span {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -40px;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $gray-light;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+}

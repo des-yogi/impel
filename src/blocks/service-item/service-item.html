@@ -1,0 +1,22 @@
+<!--DEV
+@ @include('blocks/service-item/service-item.html')
+-->
+<article class="service-item"
+  style="background-image: url('/img/@@bgImg.webp')"
+  data-bg="/img/@@bgImg.jpg"
+  data-bg-webp="/img/@@bgImg.webp"
+>
+  <!-- размер background-image ~(300x220) -->
+  <div class="service-item__inner">
+    <div class="service-item__text">
+      <span class="service-item__icon">
+        <img src="img/@@icon.svg" alt="@@title" height="48" loading="lazy" decoding="async">
+        <span style="background: @@bgColor"></span>
+        <!-- в спан вставить цвет круглого маркера -->
+      </span>
+      <h3 class="service-item__title">@@title</h3>
+    </div>
+
+    <a href="#" class="btn  btn--link">Детальніше</a>
+  </div>
+</article>

@@ -1,0 +1,30 @@
+<!--DEV
+@ @include('blocks/hero/hero.html')
+-->
+
+<section class="hero">
+  <div class="hero__inner">
+    <div class="container  hero__text">
+      <div class="hero__text-content">
+        <h1 class="display">
+          <span>IMPEL GROUP</span>
+          Більше ніж послуги
+        </h1>
+        <p class="hero__intro">Портфоліо Групи Impel включає прості та спеціалізовані послуги – від підтримання чистоти та охорони, підтримки виробничих процесів, до роботизації та автоматизації бізнес-процесів.</p>
+        <a href="#" class="btn  btn--arrow">Детальніше</a>
+      </div>
+    </div>
+    <div class="hero__img">
+      <picture>
+        <source srcset="img/hero-bg-xl.webp" media="(min-width: 1200px)" type="image/webp">
+        <source srcset="img/hero-bg-xl.jpg" media="(min-width: 1200px)">
+          <!-- 1200 -> (1068x655) -->
+        <source srcset="img/hero-bg-xl.webp" media="(min-width: 768px)" type="image/webp">
+        <source srcset="img/hero-bg-xl.jpg" media="(min-width: 768px)">
+          <!-- 768 -> 1200 (1200x735) -->
+        <source srcset="img/hero-bg-xl.webp" type="image/webp">
+        <img src="img/hero-bg-xl.jpg" width="960" height="588" alt="Описание" loading="lazy" decoding="async">
+      </picture>
+    </div>
+  </div>
+</section>

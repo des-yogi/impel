@@ -1,8 +1,176 @@
-// В этом файле должны быть стили для БЭМ-блока page-footer, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .page-footer {
+  padding-top: 48px;
+  padding-bottom: 8px;
+  background-color: $block-bg;
+  border-top: 2px solid $white;
 
   $block-name:                &; // #{$block-name}__element
+
+  &__bottom {
+    font-size: 14px;
+    text-align: center;
+
+    @media (min-width: $screen-xl) {
+      text-align: initial;
+    }
+  }
+
+  &__logo-col,
+  &__menu-col,
+  &__address-col,
+  &__tel-col {
+    margin-bottom: 24px;
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      text-align: initial;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__logo-col {
+    @include col(xs, 12);
+    @include col(xl, 2);
+  }
+
+  &__menu-col {
+    @include col(xs, 12);
+    @include col(md, 4);
+    @include col(xl, 2);
+  }
+
+  &__address-col {
+    @include col(xs, 12);
+    @include col(md, 4);
+    @include col(xl, 2);
+  }
+
+  &__tel-col {
+    @include col(xs, 12);
+    @include col(md, 4);
+    @include col(xl, 3);
+  }
+
+  &__social-col {
+    @include col(xs, 12);
+    @include col-offset(xl, 1);
+    @include col(xl, 2);
+    margin-bottom: 24px;
+    text-align: center;
+
+    @media (min-width: $screen-xl) {
+      text-align: right;
+    }
+  }
+
+  &__copyrights-col {
+    @include col(xs, 12);
+    @include col-offset(xl, 2);
+    @include col(xl, 4);
+    margin-bottom: 16px;
+  }
+
+  &__service-col {
+    @include col(xs, 12);
+    @include col(xl, 6);
+  }
+
+  &__block-title {
+    margin-top: 0 !important;
+    margin-bottom: 16px;
+    font-weight: 600 !important;
+  }
+
+  &__menu {
+    font-weight: 500;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__menu-item {
+
+    & + & {
+      margin-top: 4px;
+    }
+
+    &.active {
+
+      a {
+        color: $main-color;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__address {
+    font-weight: 500;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    p + p {
+      margin-top: 4px;
+    }
+  }
+
+  &__tel {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    padding-left: 32px;
+    font-weight: 500;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 1px;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      background-image: svg-load('../blocks/sprite-svg/svg/call-icon.svg', fill=$text-color);
+    }
+
+    a {
+      text-decoration: none !important;
+    }
+
+    a + a {
+      margin-top: 4px;
+    }
+  }
+
+  &__service {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    a {
+      margin-bottom: 16px;
+      font-weight: 500;
+      text-decoration: none;
+
+    }
+
+    a + a {
+
+      @media (min-width: $screen-xl) {
+        margin-left: 48px;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-direction: initial;
+      justify-content: flex-end;
+    }
+  }
 }

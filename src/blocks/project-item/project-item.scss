@@ -1,0 +1,36 @@
+.project-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: $white;
+  border-radius: $border-radius--xl;
+  overflow: hidden;
+
+  $block-name:                &; // #{$block-name}__element
+
+  .btn--link {
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__img {
+    background-color: $gray-lightest;
+  }
+
+  &__text {
+    padding: 24px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 14px;
+  }
+}

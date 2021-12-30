@@ -1,36 +1,33 @@
-/* poppins-regular - latin */
+/* Graphik LCG */
 @font-face {
   font-display: swap;
-  font-family: 'Poppins';
+  font-family: 'Graphik LCG';
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('../fonts/Poppins-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/Poppins-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('../fonts/GraphikLCG-Regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/GraphikLCG-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* poppins-500 - latin */
 @font-face {
   font-display: swap;
-  font-family: 'Poppins';
+  font-family: 'Graphik LCG';
   font-style: normal;
   font-weight: 500;
   src: local(''),
-       url('../fonts/Poppins-medium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/Poppins-medium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('../fonts/GraphikLCG-Medium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/GraphikLCG-Medium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* poppins-700 - latin */
 @font-face {
   font-display: swap;
-  font-family: 'Poppins';
+  font-family: 'Graphik LCG';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   src: local(''),
-       url('../fonts/Poppins-bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/Poppins-bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('../fonts/GraphikLCG-Semibold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/GraphikLCG-Semibold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
 
 // Не забыть !!!   font-display: swap;
 
@@ -64,12 +61,9 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  font-family: $font-family;
-  font-weight: 700;
+  font-family: inherit;
   line-height: 1.2;
-  color: currentColor;
+  color: $title-color;
 }
 
 .h1,
@@ -78,8 +72,7 @@ h6 {
 h1,
 h2,
 h3 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  font-weight: 600;
 }
 
 .h4,
@@ -88,38 +81,47 @@ h3 {
 h4,
 h5,
 h6 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1rem;
+  font-weight: 500;
 }
 
 .h1,
 h1 {
-  //font-size: $font-size--h1;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: $font-size--h1;
 }
 
 .h2,
 h2 {
-  //font-size: $font-size--h2;
+  margin-top: 4.5rem;
+  margin-bottom: 2rem;
+  font-size: $font-size--h2;
 }
 
 .h3,
 h3 {
-  //font-size: $font-size--h3;
+  margin-top: 4.5rem;
+  margin-bottom: 1.5rem;
+  font-size: $font-size--h3;
 }
 
 .h4,
 h4 {
-  //font-size: $font-size--h4;
+  margin-top: 4.5rem;
+  font-size: $font-size--h4;
 }
 
 .h5,
 h5 {
-  //font-size: $font-size--h5;
+  margin-top: 2rem;
+  font-size: $font-size--h5;
 }
 
 .h6,
 h6 {
-  //font-size: $font-size--h6;
+  margin-top: 2rem;
+  font-size: $font-size--h6;
 }
 
 .p,
@@ -131,12 +133,10 @@ blockquote,
 pre,
 address,
 figure {
-  //margin-top: 0.5em;
-  // margin-bottom: 0.5em;
-  color: currentColor;
+  color: inherit;
 
   & + & {
-    margin-top: 0.5em;
+    margin-top: 1em;
   }
 }
 
@@ -168,7 +168,7 @@ hr {
   margin-top: 1em;
   margin-bottom: 1em;
   border: 0;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid $text-color;
 }
 
 .small,
@@ -271,93 +271,3 @@ a {
 
 // Отключение излишних ссылок при помощи аттрибутов  aria-hidden="true" tabindex="-1"
 
-// Текст + номер, например: Шаг 1) Первый пункт списка…
-/* ol {
-  list-style: none;
-  counter-reset: steps;
-
-  li {
-    counter-increment: steps;
-
-    &::before {
-      content: "Шаг " counter(steps) ")";
-      margin-right: 0.5rem;
-      color: #ff6f00;
-    }
-  }
-} */
-
-// Вариант со стрелкой
-/* ul {
-  list-style-type: "→ ";
-  list-style-position: inside;
-} */
-
-// Цветные нумерованные маркеры с вложенностью
-/* ol {
-  list-style: none;
-  counter-reset: steps;
-
-  ol {
-    li {
-      &::before {
-        background: darkorchid;
-      }
-    }
-  }
-
-  li {
-    counter-increment: steps;
-
-    &::before {
-      display: inline-grid;
-      place-items: center; //IE 11 не совместим
-      content: counter(steps);
-      width: 1.2em;
-      height: 1.2em;
-      margin-right: 0.5rem;
-      line-height: 1.2em;
-      color: white;
-      background: #ff6f00;
-      border-radius: 50%;
-    }
-  }
-} */
-
-
-/* ol{
-  counter-reset: myCounter;
-
-  li:before {
-    display: inline-block;
-    vertical-align: baseline;
-    margin-right: 0.7em;
-    counter-increment: myCounter;
-    content: counter(myCounter)".";
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: 600;
-    text-align: left;
-    line-height: inherit;
-    color: $second-color;
-  }
-}
-
-ul {
-  li:before {
-    display: inline-block;
-    vertical-align: middle;
-    content: "";
-    width: 4px;
-    height: 4px;
-    margin-right: 0.7em;
-    margin-top: -3px;
-    border-radius: 50%;
-    background-color: $second-color;
-
-    @media (min-width: $screen-xl) {
-      width: 5px;
-      height: 5px;
-    }
-  }
-} */

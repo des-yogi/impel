@@ -1,0 +1,35 @@
+.promo-video {
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    padding-top: 102px;
+    padding-bottom: 102px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+  }
+
+  &__text {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 24px;
+
+    span {
+      display: block;
+    }
+  }
+}

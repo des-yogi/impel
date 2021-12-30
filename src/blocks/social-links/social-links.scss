@@ -1,0 +1,21 @@
+.social-links {
+  display: inline-flex;
+  align-items: center;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+
+    & + & {
+      margin-left: 24px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+  }
+}

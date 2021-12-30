@@ -1,0 +1,27 @@
+<!--DEV
+@ @include('blocks/news-block/news-block.html')
+-->
+<article class="news-block">
+  <div class="embed-responsive  news-block__img">
+    <picture>
+      <source data-srcset="img/@@img.webp" media="(min-width: 1200px)" type="image/webp">
+      <source data-srcset="img/@@img.jpg" media="(min-width: 1200px)">
+        <!-- 1200 -> (420x236) -->
+      <source data-srcset="img/@@img.webp" media="(min-width: 768px)" type="image/webp">
+      <source data-srcset="img/@@img.jpg" media="(min-width: 768px)">
+        <!-- 768 -> 1200 (542x305) -->
+      <source data-srcset="img/@@img.webp" media="(min-width: 480px)" type="image/webp">
+      <source data-srcset="img/@@img.jpg" media="(min-width: 480px)">
+        <!-- 480 -> 768 (1080x608) -->
+      <source data-srcset="img/@@img.webp" type="image/webp">
+      <img data-src="img/@@img.jpg" class="b-lazy" width="650" height="366" alt="@@title">
+    </picture>
+  </div>
+  <div class="news-block__text">
+    <h3 class="news-block__title">@@title</h3>
+    <div class="news-block__bottom">
+      <span class="publishedon">01.12.2021</span>
+      <a href="#" class="btn  btn--link">Детальніше</a>
+    </div>
+  </div>
+</article>
