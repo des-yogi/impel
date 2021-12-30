@@ -33,7 +33,8 @@
     "copyrights": [],
     "mob-nav": [],
     "projects": [],
-    "project-item": []
+    "project-item": [],
+    "seo-text": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
