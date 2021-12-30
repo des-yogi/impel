@@ -1,0 +1,15 @@
+.seo-text {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__content {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 8);
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+}
