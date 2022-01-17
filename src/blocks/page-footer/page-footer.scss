@@ -52,6 +52,12 @@
     @include col(xs, 12);
     @include col(md, 4);
     @include col(xl, 3);
+
+    @media (max-width: $screen-md - 1) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__social-col {
@@ -119,7 +125,8 @@
     }
   }
 
-  &__tel {
+  &__tel,
+  &__email {
     position: relative;
     display: inline-flex;
     flex-direction: column;
@@ -136,8 +143,6 @@
       height: 24px;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 20px;
-      background-image: svg-load('../blocks/sprite-svg/svg/call-icon.svg', fill=$text-color);
     }
 
     a {
@@ -147,6 +152,30 @@
     a + a {
       margin-top: 4px;
     }
+  }
+
+  &__tel {
+    margin-bottom: 24px;
+
+    &::before {
+      background-size: 20px;
+      background-image: svg-load('../blocks/sprite-svg/svg/call-icon.svg', fill=$text-color);
+    }
+  }
+
+  &__email {
+
+    &::before {
+      background-size: 19.5px 15px;
+      background-image: svg-load('../blocks/sprite-svg/svg/envelope-icon.svg', fill=$text-color);
+    }
+  }
+
+  &__tel-caption {
+    display: block;
+    margin-top: 8px;
+    font-size: $font-size-sm;
+    font-weight: initial;
   }
 
   &__service {

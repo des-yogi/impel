@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Новина</title>
+  @@include('_include/page_head.html')
+  <style>
+    .main-content { margin-top: 82px; }
+    @media (min-width: 768px) { .main-content { margin-top: 110px; }}
+    @media (min-width: 1366px) { .main-content { margin-top: 0; }}
+  </style>
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <div class="main-content">
+
+        @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+        <main>
+          <article class="news-page">
+
+            <header
+              class="container news-page__header"
+              style="background-image: url('/img/news-page-header.webp')"
+              data-bg="/img/news-page-header.jpg"
+              data-bg-webp="/img/news-page-header.webp"
+            >
+              <div class="row" style="position:relative;z-index:1;">
+                <div class="news-page__header-col">
+                  <h1 class="news-page__title">Ми беремо участь у програмній конференції та 10-річному ювілеї Польської федерації лікарень</h1>
+                  <p class="publishedon"><time datetime="2022-02-01">01.02.2022</time></p>
+                </div>
+              </div>
+            </header>
+
+            <div class="container  news-page__body">
+              <div class="row">
+
+                <div class="news-page__share-col">
+                  @@include('blocks/share-links/share-links.html')
+                </div>
+
+                <div class="news-page__col">
+                  <!-- [[*content]] -->
+                  <h1>Заголовок H1</h1>
+                  <p>У дискусії під назвою «Безпека пацієнтів і персоналу», модератором якої стала Олександра Куровська з cowzdrowiu.pl, Групу Impel представлятиме Ельжбета Кантович, комерційний директор групи продуктів Impel Catering.</p>
+                  <h2>Заголовок H2</h2>
+                  <p>У дискусії під назвою «Безпека пацієнтів і персоналу», модератором якої стала Олександра Куровська з cowzdrowiu.pl, Групу Impel представлятиме Ельжбета Кантович, комерційний директор групи продуктів Impel Catering.</p>
+                  <h3>Заголовок H3</h3>
+                  <p>У дискусії під назвою «Безпека пацієнтів і персоналу», модератором якої стала Олександра Куровська з cowzdrowiu.pl, Групу Impel представлятиме Ельжбета Кантович, комерційний директор групи продуктів Impel Catering.</p>
+                  <h4>Заголовок H4</h4>
+                  <p>У дискусії під назвою «Безпека пацієнтів і персоналу», модератором якої стала Олександра Куровська з cowzdrowiu.pl, Групу Impel представлятиме Ельжбета Кантович, комерційний директор групи продуктів Impel Catering.</p>
+
+                  <blockquote cite="http://example.com/facts">
+                    <p>Проекти, які ми розробляємо, впроваджуємо та супроводжуємо завжди є частиною системи, що існує в компанії.</p>
+                    <span>Наталія Семитоцька</span>
+                  </blockquote>
+
+                  <div class="table-mobile-scroll">
+                    <table>
+                      <caption>table caption</caption>
+                      <thead>
+                        <tr>
+                          <th>header</th>
+                          <th>header</th>
+                          <th>header</th>
+                          <th>header</th>
+                          <th>header</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>data</td>
+                          <td>data</td>
+                          <td>data</td>
+                          <td>data</td>
+                          <td>data</td>
+                        </tr>
+                        <tr>
+                          <td>data</td>
+                          <td>data</td>
+                          <td>data</td>
+                          <td>data</td>
+                          <td>data</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <section class="container" style="padding-top:72px;padding-bottom:72px;background:#f1f1f5;">
+            <h2 class="news-slider__container-title">Інші новини</h2>
+
+            <div style="position: relative;">
+              <div class="swiper  news-slider__container">
+                <!-- Для корректного выравнивания по вертикали требуется ограничение кол-ва строк (символов) текстового узла -->
+
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide">
+                    <article class="news-slider">
+                      <div class="embed-responsive  news-slider__img">
+                        <picture>
+                          <source srcset="img/news-img.webp" media="(min-width: 1200px)" type="image/webp">
+                          <source srcset="img/news-img.jpg" media="(min-width: 1200px)">
+                            <!-- 1200 -> (420x236) -->
+                          <source srcset="img/news-img.webp" media="(min-width: 768px)" type="image/webp">
+                          <source srcset="img/news-img.jpg" media="(min-width: 768px)">
+                            <!-- 768 -> 1200 (542x305) -->
+                          <source srcset="img/news-img.webp" media="(min-width: 480px)" type="image/webp">
+                          <source srcset="img/news-img.jpg" media="(min-width: 480px)">
+                            <!-- 480 -> 768 (1080x608) -->
+                          <source srcset="img/news-img.webp" type="image/webp">
+                          <img src="img/news-img.jpg" width="650" height="366" alt="Заголовок">
+                        </picture>
+                      </div>
+                      <div class="news-slider__text">
+                        <h3 class="news-slider__title">Ми беремо участь у програмній конференції та 10-річному ювілеї Польської федерації лікарень</h3>
+                        <div class="news-slider__bottom">
+                          <span class="publishedon">01.12.2021</span>
+                          <a href="#" class="btn  btn--link">Детальніше</a>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <article class="news-slider">
+                      <div class="embed-responsive  news-slider__img">
+                        <picture>
+                          <source srcset="img/news-img.webp" media="(min-width: 1200px)" type="image/webp">
+                          <source srcset="img/news-img.jpg" media="(min-width: 1200px)">
+                            <!-- 1200 -> (420x236) -->
+                          <source srcset="img/news-img.webp" media="(min-width: 768px)" type="image/webp">
+                          <source srcset="img/news-img.jpg" media="(min-width: 768px)">
+                            <!-- 768 -> 1200 (542x305) -->
+                          <source srcset="img/news-img.webp" media="(min-width: 480px)" type="image/webp">
+                          <source srcset="img/news-img.jpg" media="(min-width: 480px)">
+                            <!-- 480 -> 768 (1080x608) -->
+                          <source srcset="img/news-img.webp" type="image/webp">
+                          <img src="img/news-img.jpg" width="650" height="366" alt="Заголовок">
+                        </picture>
+                      </div>
+                      <div class="news-slider__text">
+                        <h3 class="news-slider__title">Ми беремо участь у програмній конференції та 10-річному ювілеї Польської федерації лікарень</h3>
+                        <div class="news-slider__bottom">
+                          <span class="publishedon">01.12.2021</span>
+                          <a href="#" class="btn  btn--link">Детальніше</a>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <article class="news-slider">
+                      <div class="embed-responsive  news-slider__img">
+                        <picture>
+                          <source srcset="img/news-img.webp" media="(min-width: 1200px)" type="image/webp">
+                          <source srcset="img/news-img.jpg" media="(min-width: 1200px)">
+                            <!-- 1200 -> (420x236) -->
+                          <source srcset="img/news-img.webp" media="(min-width: 768px)" type="image/webp">
+                          <source srcset="img/news-img.jpg" media="(min-width: 768px)">
+                            <!-- 768 -> 1200 (542x305) -->
+                          <source srcset="img/news-img.webp" media="(min-width: 480px)" type="image/webp">
+                          <source srcset="img/news-img.jpg" media="(min-width: 480px)">
+                            <!-- 480 -> 768 (1080x608) -->
+                          <source srcset="img/news-img.webp" type="image/webp">
+                          <img src="img/news-img.jpg" width="650" height="366" alt="Заголовок">
+                        </picture>
+                      </div>
+                      <div class="news-slider__text">
+                        <h3 class="news-slider__title">Ми беремо участь у програмній конференції та 10-річному ювілеї Польської федерації лікарень</h3>
+                        <div class="news-slider__bottom">
+                          <span class="publishedon">01.12.2021</span>
+                          <a href="#" class="btn  btn--link">Детальніше</a>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="news-slider__controls">
+                <div class="news-slider__button-prev swiper-button-prev"></div>
+                <div class="news-slider__button-next swiper-button-next"></div>
+              </div>
+            </div>
+
+          </section>
+
+        </main>
+
+      </div>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

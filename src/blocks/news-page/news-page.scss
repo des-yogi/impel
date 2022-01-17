@@ -1,0 +1,86 @@
+.news-page {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .publishedon {
+    background-image: svg-load('../blocks/sprite-svg/svg/calendar-icon.svg', fill=$white);
+  }
+
+  &__header {
+    position: relative;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-color: #040930;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    color: $white;
+
+    @media (min-width: $screen-xxl) {
+      padding-top: 128px;
+      padding-bottom: 128px;
+    }
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(90deg, #040931 0%, rgba(4, 9, 49, 0) 100%);
+      pointer-events: none;
+
+      @media (min-width: $screen-xxl) {
+        background: linear-gradient(90deg, #040931 10%, rgba(4, 9, 49, 0) 100%);
+      }
+    }
+  }
+
+  &__header-col {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xxl, 8);
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    color: inherit;
+
+    @media (max-width: $screen-md - 1) {
+      font-size: 27px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__body {
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    @media (min-width: $screen-xxl) {
+      padding-top: 72px;
+      padding-bottom: 72px;
+    }
+  }
+
+  &__share-col {
+    @include col(xs, 12);
+    @include col(xl, 2);
+    margin-bottom: 48px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 8);
+    //@include col(xxl, 7);
+  }
+}

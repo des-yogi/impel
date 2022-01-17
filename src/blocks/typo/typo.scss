@@ -195,9 +195,40 @@ abbr[title] {
 }
 
 blockquote {
-  padding: 0;
-  margin-left: 0;
-  margin-right: 0;
+  padding: 24px;
+  margin: 1.5em 0 !important;
+  background-color: $block-bg;
+  border-radius: $border-radius;
+
+  p {
+    font-size: 18px;
+    font-weight: 600;
+    color: $title-color;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  span {
+    display: block;
+
+    &::before {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 16px;
+      content: "";
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      color: $white;
+      background-color: $main-color;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 24px; //quotes-icon
+      background-image: svg-load('../blocks/sprite-svg/svg/quotes-icon.svg', fill=$white);
+    }
+  }
 }
 
 dt {

@@ -44,7 +44,17 @@
     "service-difference": [],
     "faq-block": [],
     "service-description": [],
-    "login-form": []
+    "login-form": [],
+    "service-page": [],
+    "contact-block": [],
+    "news-page": [],
+    "share-links": [],
+    "news-slider": [],
+    "contacts": [],
+    "contacts-map": [],
+    "vacancies": [],
+    "vacancy-page": [],
+    "page-404": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

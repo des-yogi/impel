@@ -1,0 +1,45 @@
+<!--DEV
+@ @include('blocks/contact-block/contact-block.html')
+-->
+<section class="container  contact-block">
+  <div class="row">
+    <div class="contact-block__col">
+      <div class="contact-block__inner">
+        <h2 class="contact-block__title">Зв'яжіться з нами <br> та ознайомтеся з пропозицією</h2>
+        <form class="contact-block__form" action="#" method="post">
+          <div>
+            @@include('../../blocks/field-text/field-text.html', {
+              "type": "text",
+              "name": "Ваше ім'я"
+            })
+
+            @@include('../../blocks/field-text/field-text.html', {
+              "type": "tel",
+              "name": "Телефон"
+            })
+
+            <label class="field-text">
+              <span class="visually-hidden">Повідомлення</span>
+              <span class="field-text__input-wrap">
+                <textarea class="field-text__input" name="message" placeholder="Повідомлення"></textarea>
+                <span class="field-text__help-text error"></span>
+              </span>
+            </label>
+
+            <div class="contact-block__agreement">
+              <button class="btn  btn--arrow  btn--arrow--fill" type="submit">Відправити</button>
+
+              <div class="field-checkbox">
+                <label class="field-checkbox__name">
+                  <input class="field-checkbox__input" type="checkbox" name="agreement" checked>
+                  <span class="field-checkbox__name-text">Я згоден на обробку персональних даних відповідно до <a href="#">Політики конфіденційності</a></span>
+                </label>
+              </div>
+
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

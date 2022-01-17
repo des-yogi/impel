@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Наші проекти</title>
+  @@include('_include/page_head.html')
+  <style>
+    .main-content { margin-top: 82px; }
+    @media (min-width: 768px) { .main-content { margin-top: 110px; }}
+    @media (min-width: 1366px) { .main-content { margin-top: 0; }}
+  </style>
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <div class="main-content">
+
+        <div style="background-color:#f1f1f5;">
+          @@include('blocks/breadcrumbs/breadcrumbs.html')
+        </div>
+
+        <main style="background-color:#f1f1f5;">
+
+          <div class="container  main-content__header">
+            <div class="row">
+              <div class="main-content__col">
+                <h1>Наші проекти</h1>
+                <div class="main-content__descr">
+                  <p>Ми пов'язуємо потреби вашого бізнесу із нашими рішеннями. Саме тому ми постійно розвиваємо портфель доступних вам послуг. Дізнайтеся більше.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container main-content__cards-wrapper">
+            <div class="row">
+              <div class="projects__col">
+                @@include('blocks/project-item/project-item.html', {
+                  "title": "Київстар"
+                })
+              </div>
+              <div class="projects__col">
+                @@include('blocks/project-item/project-item.html', {
+                  "title": "КиївНеСтар"
+                })
+              </div>
+              <div class="projects__col">
+                @@include('blocks/project-item/project-item.html', {
+                  "title": "Опять Київстар"
+                })
+              </div>
+            </div>
+          </div>
+
+        </main>
+
+      </div>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

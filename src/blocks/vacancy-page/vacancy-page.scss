@@ -1,0 +1,107 @@
+.vacancy-page {
+  margin-bottom: 48px;
+
+  @media (min-width: $screen-xxl) {
+    margin-bottom: 96px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 2em;
+  }
+
+  .contact-block {
+    padding: 48px 0;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+
+    @media (min-width: $screen-md) {
+      padding: 48px;
+      border: 1px solid $border-color;
+      border-radius: $border-radius--xl;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding: 48px 64px;
+    }
+  }
+
+  .contact-block__title {
+    text-align: left;
+
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      text-decoration: none;
+
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+        content: "";
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px;
+        background-image: svg-load('../blocks/sprite-svg/svg/call-icon.svg', fill=$text-color);
+      }
+    }
+  }
+
+  &__col-text {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 7);
+    margin-bottom: 72px;
+  }
+
+  &__col-form {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 5);
+  }
+
+  &__title {
+
+    @media (max-width: $screen-md - 1) {
+      font-size: 27px;
+    }
+  }
+
+  &__city {
+    margin-bottom: 48px;
+    font-size: 18px;
+    font-weight: 600;
+
+    @media (min-width: $screen-xxl) {
+      margin-bottom: 72px;
+    }
+
+    &::before {
+      display: inline-block;
+      vertical-align: middle;
+      content: "";
+      width: 32px;
+      height: 32px;
+      margin-right: 8px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 32px;
+      background-image: svg-load('../blocks/sprite-svg/svg/map-pin.svg', fill=$main-color);
+    }
+  }
+
+  // &__form {
+
+  //   @media (min-width: $screen-xl) {
+  //     position: sticky;
+  //     top: 110px;
+  //   }
+  // }
+}

@@ -1,14 +1,32 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/service-banner/service-banner.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="service-banner">content</div>
-
 -->
+<div class="container  service-banner">
+  <div class="row">
+
+    <div class="service-banner__text-col">
+      <div class="service-banner__text">
+        <span class="service-item__icon">
+          <img src="img/сleaning-black.svg" alt="title" height="48" loading="lazy" decoding="async">
+          <span style="background: red"></span>
+          <!-- в спан вставить цвет круглого маркера -->
+        </span>
+        <h1 class="service-banner__title">Клінінг</h1>
+        <div class="service-banner__descr">
+          <p>Ви приходите на роботу, система контролю доступу дозволяє заїхати на парковку компанії, потім зчитує вашу присутність, в офісі включається кондиціонер, у крані є вода для кави, ви включаєте комп'ютер та інші офісні пристрої.</p>
+        </div>
+        <a href="#" class="btn  btn--arrow">Зв'язатися з нами</a>
+      </div>
+    </div>
+
+    <div class="service-banner__img-col">
+      <div class="embed-responsive embed-responsive--4-3  service-banner__img">
+        <picture>
+          <source srcset="img/service-banner-img.webp" type="image/webp">
+          <img src="img/service-banner-img.png" width="675" height="506" alt="Alt text" loading="lazy" decoding="async">
+        </picture>
+      </div>
+    </div>
+
+  </div>
+</div>

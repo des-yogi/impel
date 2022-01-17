@@ -1,0 +1,58 @@
+.page-404 {
+  height: 580px;
+  color: $white;
+  background-color: #090e24;
+  background-position: right -80px top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/page-404-bg-mob.jpg);
+
+  @media (min-width: $screen-sm) {
+    background-position: right top;
+  }
+
+  @media (min-width: $screen-md) {
+    height: 450px;
+    background-image: url(../img/page-404-bg-dt.jpg);
+  }
+
+  @media (min-width: $screen-xxl) {
+    height: 810px;
+    background-position: center top;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  .btn {
+    margin-top: 48px;
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 6);
+    @include col-offset(xl, 1);
+    @include col(xl, 5);
+  }
+
+  &__title {
+    margin-top: 300px;
+    margin-bottom: 24px;
+    font-size: 63px;
+    color: inherit;
+
+    @media (min-width: $screen-md) {
+      margin-top: 150px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      margin-top: 250px;
+    }
+  }
+
+  &__descr {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: inherit;
+  }
+}

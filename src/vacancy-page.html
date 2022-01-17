@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Страница вакансии</title>
+  @@include('_include/page_head.html')
+  <style>
+    .main-content { margin-top: 82px; }
+    @media (min-width: 768px) { .main-content { margin-top: 110px; }}
+    @media (min-width: 1366px) { .main-content { margin-top: 0; }}
+  </style>
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <div class="main-content">
+
+        @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+        <main>
+          <article class="container  vacancy-page">
+            <div class="row">
+              <div class="vacancy-page__col-text">
+                <h1 class="vacancy-page__title">Адміністратор операційного відділу</h1>
+
+                <p class="vacancy-page__intro">Міжнародна сервісна компанія запрошує кандидатів взяти участь у конкурсі на заміщення вакансії Адміністратор операційного відділу</p>
+                <p class="vacancy-page__city">Місто: Київ</p>
+
+                <h3>Основні обов'язки:</h3>
+                <ul>
+                  <li>Роботи з операційними менеджерами: прийом та закриття заявок, розподіл робіт;</li>
+                  <li>Робота з проблемними заявками, вирішення спірних питань;</li>
+                  <li>Ведення листування із Замовниками, вирішення оперативних питань;</li>
+                  <li>отримання, видача, облік готівкових коштів;</li>
+                  <li>Складання внутрішньої фінансової звітності;</li>
+                  <li>Адміністрацію договорів: контроль термінів, обсягу роботи, контроль звітності;</li>
+                  <li>Прийом зовнішніх дзвінків та зворотний зв'язок на ел. листи.</li>
+                </ul>
+
+                <h3>Основні вимоги:</h3>
+                <ul>
+                  <li>Роботи з операційними менеджерами: прийом та закриття заявок, розподіл робіт;</li>
+                  <li>Робота з проблемними заявками, вирішення спірних питань;</li>
+                  <li>Ведення листування із Замовниками, вирішення оперативних питань;</li>
+                  <li>отримання, видача, облік готівкових коштів;</li>
+                  <li>Складання внутрішньої фінансової звітності;</li>
+                </ul>
+
+                <h3>Умови роботи:</h3>
+                <ul>
+                  <li>Офіційне працевлаштування;</li>
+                  <li>Соціальні гарантії згідно з КЗпП;</li>
+                  <li>Компенсаційний пакет;</li>
+                  <li>Навчання усередині компанії;</li>
+                  <li>Можливість кар"єрного росту.</li>
+                </ul>
+
+                <p><strong>Мы готовы к сотрудничеству с активными людьми, которые любят свою работу!</strong></p>
+              </div>
+
+              <div class="vacancy-page__col-form">
+                <div class="vacancy-page__form">
+                  <section class="contact-block">
+                    <p class="h3 contact-block__title">Якщо вас зацікавила вакансія, зв'яжіться з нами по телефону або надішліть резюме</p>
+                    <p class="h3 contact-block__title">
+                      <a href="tel:+380681909111">+38 068 190 91 11</a>
+                    </p>
+
+                    <form class="contact-block__form" action="#" method="post">
+                      <div>
+                        @@include('blocks/field-text/field-text.html', {
+                          "type": "text",
+                          "name": "Ваше ім'я"
+                        })
+
+                        @@include('blocks/field-text/field-text.html', {
+                          "type": "email",
+                          "name": "E-mail"
+                        })
+
+                        @@include('blocks/field-text/field-text.html', {
+                          "type": "tel",
+                          "name": "Телефон"
+                        })
+
+                        <label class="field-text">
+                          <span class="visually-hidden">Повідомлення</span>
+                          <span class="field-text__input-wrap">
+                            <textarea class="field-text__input" name="message" placeholder="Повідомлення"></textarea>
+                            <span class="field-text__help-text error"></span>
+                          </span>
+                        </label>
+
+                        <div class="contact-block__agreement">
+                          <button class="btn  btn--arrow  btn--arrow--fill" type="submit">Відправити</button>
+
+                          <div class="field-checkbox">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox" name="agreement" checked>
+                              <span class="field-checkbox__name-text">Я згоден на обробку персональних даних відповідно до <a href="#">Політики конфіденційності</a></span>
+                            </label>
+                          </div>
+
+                        </div>
+                      </div>
+                    </form>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </article>
+        </main>
+
+      </div>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
