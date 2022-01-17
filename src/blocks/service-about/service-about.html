@@ -1,14 +1,27 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/service-about/service-about.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="service-about">content</div>
-
 -->
+
+<section class="container  service-banner  service-about">
+  <div class="row">
+
+    <div class="service-banner__text-col">
+      <div class="service-banner__text">
+        <h2 class="service-banner__title">Про нас</h2>
+        <div class="service-banner__descr">
+          <p>Ви приходите на роботу, система контролю доступу дозволяє заїхати на парковку компанії, потім зчитує вашу присутність, в офісі включається кондиціонер, у крані є вода для кави, ви включаєте комп'ютер та інші офісні пристрої.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-banner__img-col">
+      <div class="embed-responsive embed-responsive--4-3  service-banner__img">
+        <picture>
+          <source data-srcset="img/service-banner-img.webp" type="image/webp">
+          <img class="b-lazy" data-src="img/service-banner-img.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="675" height="506" alt="Alt text" loading="lazy" decoding="async">
+        </picture>
+      </div>
+    </div>
+
+  </div>
+</section>

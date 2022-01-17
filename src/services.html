@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Усі послуги</title>
+  @@include('_include/page_head.html')
+  <style>
+    .main-content { margin-top: 82px; }
+    @media (min-width: 768px) { .main-content { margin-top: 110px; }}
+    @media (min-width: 1366px) { .main-content { margin-top: 0; }}
+  </style>
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <div class="main-content">
+
+        <div style="background-color:#f1f1f5;">
+          @@include('blocks/breadcrumbs/breadcrumbs.html')
+        </div>
+
+        <main style="background-color:#f1f1f5;">
+
+          <div class="container  main-content__header">
+            <div class="row">
+              <div class="main-content__col">
+                <h1>Усі послуги</h1>
+                <div class="main-content__descr">
+                  <p>Ми пов'язуємо потреби вашого бізнесу із нашими рішеннями. Саме тому ми постійно розвиваємо портфель доступних вам послуг. Дізнайтеся більше.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container main-content__cards-wrapper">
+            <div class="row">
+              <div class="services-block__col">
+                @@include('blocks/service-item/service-item.html', {
+                  "title": "Клінінг",
+                  "icon": "сleaning-black",
+                  "bgImg": "service-item-img",
+                  "bgColor": "linear-gradient(135deg, #199CDB 0%, #084B85 100%)"
+                })
+              </div>
+
+              <div class="services-block__col">
+                @@include('blocks/service-item/service-item.html', {
+                  "title": "Технічне обслуговування",
+                  "icon": "tech-black",
+                  "bgImg": "service-item-img",
+                  "bgColor": "linear-gradient(135deg, #7F7F7F 0%, #575757 100%)"
+                })
+              </div>
+
+              <div class="services-block__col">
+                @@include('blocks/service-item/service-item.html', {
+                  "title": "Обслуговування медичних закладів",
+                  "icon": "health-black",
+                  "bgImg": "service-item-img",
+                  "bgColor": "linear-gradient(135deg, #199CDB 0%, #084B85 100%)"
+                })
+              </div>
+
+              <div class="services-block__col">
+                @@include('blocks/service-item/service-item.html', {
+                  "title": "Клінінг",
+                  "icon": "сleaning-black",
+                  "bgImg": "service-item-img",
+                  "bgColor": "linear-gradient(135deg, #199CDB 0%, #084B85 100%)"
+                })
+              </div>
+            </div>
+          </div>
+
+        </main>
+
+      </div>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

@@ -35,4 +35,13 @@
     margin-top: 0;
     margin-bottom: 8px;
   }
+
+  &__project-descr {
+
+    &:empty {
+      display: none;
+    }
+
+    p {}
+  }
 }

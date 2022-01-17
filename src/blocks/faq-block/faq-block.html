@@ -1,14 +1,57 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/faq-block/faq-block.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="faq-block">content</div>
-
 -->
+<section class="faq-block">
+  <h2 class="service-description__title  faq-block__title">
+    Допомога FAQ
+    <span class="faq-block__title-desc">Часто задавані питання:</span>
+  </h2>
+  <div class="accordion" id="faq-block" role="list">
+    <div class="faq-block__item" role="listitem">
+      <div class="faq-block__item-title" id="headingOne">
+        <h3 class="faq-block__caption">
+          <button class="faq-block__btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Які гарантії?
+          </button>
+        </h3>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faq-block">
+        <div class="faq-block__item-body">
+          Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the class.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-block__item" role="listitem">
+      <div class="faq-block__item-title" id="headingTwo">
+        <h3 class="faq-block__caption">
+          <button class="faq-block__btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Как производиться оплата?
+          </button>
+        </h3>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faq-block">
+        <div class="faq-block__item-body">
+          Some placeholder content for the second accordion panel. This panel is hidden by default.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-block__item" role="listitem">
+      <div class="faq-block__item-title" id="headingThree">
+        <h3 class="faq-block__caption">
+          <button class="faq-block__btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Скільки триватиме клінінг?
+          </button>
+        </h3>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faq-block">
+        <div class="card-body">
+          And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

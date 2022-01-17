@@ -1,0 +1,52 @@
+.contact-block {
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 12);
+  }
+
+  &__inner {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    border: 1px solid $border-color;
+    border-left-width: 0;
+    border-right-width: 0;
+
+    @media (min-width: $screen-md) {
+      padding: 64px 10.8%;
+      border-left-width: 1px;
+      border-right-width: 1px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      padding-left: 260px; //260
+      padding-right: 260px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  &__agreement {
+    margin-top: 32px;
+
+    .btn {
+      width: 100%;
+      margin-bottom: 32px;
+    }
+  }
+}

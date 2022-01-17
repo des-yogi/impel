@@ -212,7 +212,6 @@ a {
   @include transition($transition-collapse);
 }
 
-
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -370,9 +369,63 @@ a {
   }
 }
 
+// Grid
+
+.main-content {
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 9);
+    @include col(xl, 6);
+    @include col(xxl, 5);
+  }
+
+  &__header {
+    margin-bottom: 48px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 72px;
+    }
+  }
+
+  &__descr {
+
+    p:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__cards-wrapper {
+    padding-bottom: 24px;
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: 48px;
+    }
+  }
+}
+
+.text-page {
+  padding-bottom: 48px;
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 72px;
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 8);
+    @include col(xxl, 7);
+  }
+}
+
+// .col-1-2-3 {
+
+// }
+
 .display {
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $screen-md - 1) {
     font-size: 27px;
   }
 
@@ -391,8 +444,15 @@ a {
   border-color: $main-color !important;
 }
 
+.swiper-slide,
+.swiper-wrapper {
+  box-sizing: border-box;
+}
+
 .services-slider__button-prev,
-.services-slider__button-next {
+.services-slider__button-next,
+.news-slider__button-prev,
+.news-slider__button-next {
   top: unset;
   bottom: 10px;
   width: 32px;
@@ -435,7 +495,8 @@ a {
   }
 }
 
-.services-slider__button-prev {
+.services-slider__button-prev,
+.news-slider__button-prev {
   left: 26px;
 
   @media (min-width: $screen-sm) {
@@ -455,7 +516,8 @@ a {
   }
 }
 
-.services-slider__button-next {
+.services-slider__button-next,
+.news-slider__button-next {
   right: 26px;
 
   @media (min-width: $screen-sm) {
@@ -478,7 +540,7 @@ a {
 .publishedon {
   padding-left: 32px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   color: inherit;
   background-repeat: no-repeat;
   background-position: left top;
@@ -488,6 +550,12 @@ a {
   @media (min-width: $screen-sm) {
     font-size: 16px;
   }
+
+  // time {
+  //   display: inline-block;
+  //   vertical-align: top;
+  //   transform: translateY(1px);
+  // }
 }
 
 .tel-link {
@@ -515,17 +583,4 @@ a {
   }
 }
 
-.text-page {
-  padding-bottom: 48px;
 
-  @media (min-width: $screen-xl) {
-    padding-bottom: 72px;
-  }
-
-  &__col {
-    @include col(xs, 12);
-    @include col(md, 10);
-    @include col(xl, 8);
-    @include col(xxl, 7);
-  }
-}

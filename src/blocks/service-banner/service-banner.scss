@@ -1,9 +1,49 @@
-// В этом файле должны быть стили для БЭМ-блока service-banner, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .service-banner {
+  background-color: $block-bg;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__text-col {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 6);
+
+    @media (max-width: $screen-xl - 1) {
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img-col {
+    @include col(xs, 12);
+    @include col(xl, 6);
+  }
+
+  &__descr {
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: $screen-xl) {
+      justify-content: flex-end;
+    }
+
+    img {
+      max-width: 675px;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
 }

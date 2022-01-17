@@ -1,0 +1,67 @@
+.vacancies {
+  padding-bottom: 24px;
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 48px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  .publishedon {
+    margin: 0;
+  }
+
+  .btn--link {
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      //pointer-events: none;
+    }
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(lg, 6);
+    margin-bottom: 24px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+    padding: 24px;
+    background-color: $white;
+    border-radius: $border-radius--xl;
+  }
+
+  &__card-title {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  &__card-text {
+
+    p {
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__card-more {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+}

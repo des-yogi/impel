@@ -75,6 +75,18 @@
         background-color: $main-color--active;
         border-color: $main-color--active;
       }
+
+      &:disabled {
+        cursor: not-allowed;
+        color: $text-muted;
+        background-color: $gray-lightest;
+        border-color: $border-color;
+        background-image: svg-load('../blocks/sprite-svg/svg/btn-arrow-icon.svg', fill=$text-muted);
+
+        @at-root a.btn--disabled {
+          pointer-events: none;
+        }
+      }
     }
   }
 

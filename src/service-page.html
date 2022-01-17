@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Home page</title>
+  <title>Клінінг</title>
   @@include('_include/page_head.html')
   <style>
     .main-content { margin-top: 82px; }
@@ -28,11 +28,36 @@
 
         <main>
 
-          <div style="background-color:#f1f1f5;">
-            @@include('blocks/service-banner/service-banner.html')
-          </div>
+          @@include('blocks/service-banner/service-banner.html')
 
           @@include('blocks/service-description/service-description.html')
+
+          @@include('blocks/service-benefits/service-benefits.html')
+
+          <section class="container  service-description">
+            <div class="row">
+              <div class="service-description__col-left">
+                <h2 class="service-description__title">Що нас вирізняє?</h2>
+                <ul>
+                  <li>Багаторічний досвід проектування та монтажу систем вентиляції та кондиціювання для об'єктів різних типів та розмірів.</li>
+                  <li>
+                    Сертифікати та галузеві дозволи, необхідні для встановлення та обслуговування, такі як:
+                    <ul>
+                      <li>SEP в області СПОСТЕРЕЖЕННЯ / ЕКСПЛУАТАЦІЇ / КОНТРОЛЮ ТА ВИМІР</li>
+                      <li>R22 - так звана зелена карта.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="service-description__col-right">
+                @@include('blocks/faq-block/faq-block.html')
+              </div>
+            </div>
+          </section>
+
+          @@include('blocks/service-about/service-about.html')
+
+          @@include('blocks/contact-block/contact-block.html')
 
         </main>
 

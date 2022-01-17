@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Вакансії</title>
+  @@include('_include/page_head.html')
+  <style>
+    .main-content { margin-top: 82px; }
+    @media (min-width: 768px) { .main-content { margin-top: 110px; }}
+    @media (min-width: 1366px) { .main-content { margin-top: 0; }}
+  </style>
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <div class="main-content">
+
+        <div style="background-color:#f1f1f5;">
+          @@include('blocks/breadcrumbs/breadcrumbs.html')
+        </div>
+
+        <main style="background-color:#f1f1f5;">
+
+          <div class="container  main-content__header">
+            <div class="row">
+              <div class="main-content__col">
+                <h1>Вакансії</h1>
+                <div class="main-content__descr">
+                  <p>Ми пов'язуємо потреби вашого бізнесу із нашими рішеннями. Саме тому ми постійно розвиваємо портфель доступних вам послуг. Дізнайтеся більше.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container  vacancies">
+            <div class="row" role="list">
+
+              <div class="vacancies__col" role="listitem">
+                <article class="vacancies__card">
+                  <div class="vacancies__card-text">
+                    <h2 class="h3  vacancies__card-title">Адміністратор операційного відділу на полставки</h2>
+                    <p>Міжнародна сервісна компанія запрошує кандидатів взяти участь у конкурсі на заміщення вакансії Адміністратор операційного відділу</p>
+                  </div>
+                  <div class="vacancies__card-more">
+                    <p class="publishedon">
+                      <time datetime="2022-02-01">01.02.2022</time>
+                    </p>
+                    <a href="vacancy-page.html" class="btn  btn--link">Детальніше</a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="vacancies__col" role="listitem">
+                <article class="vacancies__card">
+                  <div class="vacancies__card-text">
+                    <h2 class="h3  vacancies__card-title">Менеджер</h2>
+                    <p>Міжнародна сервісна компанія запрошує кандидатів взяти участь у конкурсі на заміщення вакансії Адміністратор операційного відділу</p>
+                  </div>
+                  <div class="vacancies__card-more">
+                    <p class="publishedon">
+                      <time datetime="2022-02-01">01.02.2022</time>
+                    </p>
+                    <a href="vacancy-page.html" class="btn  btn--link">Детальніше</a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="vacancies__col" role="listitem">
+                <article class="vacancies__card">
+                  <div class="vacancies__card-text">
+                    <h2 class="h3  vacancies__card-title">Адміністратор операційного відділу</h2>
+                    <p>Міжнародна сервісна компанія запрошує кандидатів взяти участь у конкурсі на заміщення вакансії Адміністратор операційного відділу</p>
+                  </div>
+                  <div class="vacancies__card-more">
+                    <p class="publishedon">
+                      <time datetime="2022-02-01">01.02.2022</time>
+                    </p>
+                    <a href="vacancy-page.html" class="btn  btn--link">Детальніше</a>
+                  </div>
+                </article>
+              </div>
+
+            </div>
+          </div>
+
+        </main>
+
+      </div>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
