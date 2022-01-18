@@ -101,6 +101,13 @@
     @media (min-width: $screen-md) {
       margin-top: 64px;
     }
+
+    span {
+      display: block;
+      margin-top: 8px;
+      font-size: 16px;
+      font-weight: 400;
+    }
   }
 
   &__restore {

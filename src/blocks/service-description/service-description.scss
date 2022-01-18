@@ -38,10 +38,73 @@
 
   &__project-descr {
 
+
     &:empty {
       display: none;
     }
 
     p {}
+  }
+
+  &__project-icon {
+    @include col(xs, 12);
+    @include col(xl, 6);
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-weight: 600;
+
+    span {
+      display: block;
+      position: relative;
+      padding-left: 40px;
+      line-height: 1.25;
+    }
+
+    span::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: 0;
+      //transform: translateY(-50%);
+      width: 32px;
+      height: 32px;
+      //margin-right: 8px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--start {
+
+      span::before {
+        background-size: 25px;
+        background-image: svg-load('../blocks/sprite-svg/svg/calendar-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--area {
+
+      span::before {
+        background-size: 22px;
+        background-image: svg-load('../blocks/sprite-svg/svg/area-icon.svg', fill=$main-color);
+      }
+    }
+
+    &--location {
+
+      span::before {
+        background-size: 28px;
+        background-image: svg-load('../blocks/sprite-svg/svg/map-pin.svg', fill=$main-color);
+      }
+    }
+
+    &--type {
+
+      span::before {
+        background-size: 26px 24px;
+        background-image: svg-load('../blocks/sprite-svg/svg/case-icon.svg', fill=$main-color);
+      }
+    }
+
   }
 }
