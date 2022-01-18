@@ -1,6 +1,15 @@
 # impel
 * https://des-yogi.github.io/impel/
-* https://des-yogi.github.io/impel/login-page.html
-* https://des-yogi.github.io/impel/text-page.html
+* https://des-yogi.github.io/impel/services.html
 * https://des-yogi.github.io/impel/service-page.html
+* https://des-yogi.github.io/impel/projects.html
+* https://des-yogi.github.io/impel/project-page.html
+* https://des-yogi.github.io/impel/news.html
+* https://des-yogi.github.io/impel/news-page.html
+* https://des-yogi.github.io/impel/vacancies.html
+* https://des-yogi.github.io/impel/vacancy-page.html
+* https://des-yogi.github.io/impel/contacts.html
+* https://des-yogi.github.io/impel/text-page.html
 * https://des-yogi.github.io/impel/page-404.html
+* https://des-yogi.github.io/impel/login-page.html
+* https://des-yogi.github.io/impel/password-recovery-page.html
