@@ -2,7 +2,7 @@
 <html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="utf-8">
-  <title>Вхід до кабінету</title>
+  <title>Страница вакансии</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  <meta name="MobileOptimized" content="320">  <!--DEV Edge и ряд мобильных браузеров автоматом преобразуют телефоны в ссылки. Отключим это. -->  <meta name="format-detection" content="telephone=no">  <meta name="format-detection" content="email=no">  <meta name="format-detection" content="date=no">  <meta name="format-detection" content="address=no">  <meta name="description" content>  <meta name="keywords" content>  <meta name="robots" content="index,follow">  <!-- OpenGraph microdata  <meta property="og:url"      content="https://www.your-domain.com/your-page.html" />  <meta property="og:type"          content="website" />  <meta property="og:title"         content="Your Website Title" />  <meta property="og:description"   content="Your description" />  <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />  <meta property="og:locale"        content="uk_UA" />  -->  <!-- <link rel="canonical" href="https://www.your-domain.com/"> -->  <!-- <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin>  <link rel="preload" href="assets/fonts/roboto-v18-cyrillic_latin-500.woff2" as="font" type="font/woff2" crossorigin>  <link rel="preload" href="assets/fonts/noto-sans-v7-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin> -->  <link href="css/style.min.css" rel="stylesheet" media="screen">  <style>
     .main-content { margin-top: 82px; }
     @media (min-width: 768px) { .main-content { margin-top: 110px; }}
@@ -21,53 +21,72 @@
 <noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
   <div class="page__inner">
     <div class="page__content">      <header class="page-header">        <div class="container  page-header__top">          <div class="page-header__top-inner">            <div class="page-header__main-service">              <a href="tel:+380681909111" class="tel-link" style="margin-right: 48px;">                <span>+38 068 190 91 11</span>              </a>              <!--DEV              @ @include('blocks/lang-switcher/lang-switcher.html')              -->              <div class="lang-switcher  dropdown">                <button id="topLang" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" data-offset="0,8">                  <svg width="19.5" height="19.5"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#globe-icon"/></svg>                  <span>                    <span class="visually-hidden">Текущий язык</span>                    Укр                  </span>                </button>                <div class="dropdown-menu" aria-labelledby="topLang">                  <a class="dropdown-item" href="#">Рус</a>                  <a class="dropdown-item" href="#">Англ</a>                </div>              </div>            </div>            <a href="#" class="btn  btn--fill">Кабінет клієнта</a>          </div>        </div>        <div class="page-header__main">          <div class="container page-header__main-content">            <!--DEV            @ @include('blocks/logo/logo.html')            -->            <a href="index.html" class="logo  @@addClass" title="Impel Group">              <img src="img/impel-group-logo.svg" alt="logo" width="100" height="32">            </a>            <!--DEV            @ @include('blocks/main-nav/main-nav.html')            -->            <nav class="menu  main-nav">              <ul>                <li><a href="#">Головна</a></li>                <li><a href="#">Послуги</a>                  <ul>                    <li class="active"><a href="#link1">Клінінг</a></li>                    <li><a href="#link2">Технічне обслуговування</a></li>                    <li><a href="#link3">Обслуговування медичних закладів</a></li>                  </ul>                </li>                <li><a href="#">Наші проекти</a></li>                <li><a href="#">Про нас</a></li>                <li><a href="#">Новини</a></li>                <li class="active"><a href="#">FAQ</a></li>                <li><a href="#">Контакти</a></li>              </ul>            </nav>            <div class="page-header__main-service">              <a href="tel:+380681909111" class="tel-link" style="margin-right: 48px;">                <span>+38 068 190 91 11</span>              </a>              <!--DEV              @ @include('blocks/lang-switcher/lang-switcher.html')              -->              <div class="lang-switcher  dropdown">                <button id="mainLang" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" data-offset="0,28">                  <svg width="19.5" height="19.5"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#globe-icon"/></svg>                  <span>                    <span class="visually-hidden">Текущий язык</span>                    Укр                  </span>                </button>                <div class="dropdown-menu" aria-labelledby="mainLang">                  <a class="dropdown-item" href="#">Рус</a>                  <a class="dropdown-item" href="#">Англ</a>                </div>              </div>            </div>            <button id="main-nav-toggler" class="burger" type="button" data-toggle="collapse" data-target="#collapseMenuMob" aria-expanded="false" aria-controls="collapseMenuMob" aria-label="Переключатель моб. меню"><span></span></button>          </div>          <nav id="collapseMenuMob" class="container  mob-nav  collapse">            <div class="mob-nav__service-menu">              <a href="tel:+380681909111" class="tel-link">                <span>+38 068 190 91 11</span>              </a>              <ul class="list-nostyled mob-nav__lang" aria-label="Доступные языки">                <li class="active"><a>Укр</a></li>                <li><a href="#">Рус</a></li>                <li><a href="#">Англ</a></li>              </ul>              <a href="#" class="btn  btn--fill">Кабінет клієнта</a>            </div>            <ul class="list-nostyled  mob-nav__list">              <li class="mob-nav__list-item  active">                <a href="#">Головна</a>              </li>              <li class="mob-nav__list-item  has-child">                <div class="mob-nav__link-wrapper">                  <a href="#">Послуги</a>                  <button class="mob-nav__submenu-toggle" type="button" data-toggle="collapse" data-target="#collapseItemMenu-1" aria-expanded="false" aria-controls="collapseItemMenu-1">                    <span class="visually-hidden">Открыть подменю</span>                  </button>                </div>                <ul id="collapseItemMenu-1" class="list-nostyled  mob-nav__sub-list collapse">                  <li class="mob-nav__list-item">                    <a href="#">Клінінг</a>                  </li>                  <li class="mob-nav__list-item">                    <a href="#">Технічне обслуговування</a>                  </li>                  <li class="mob-nav__list-item  active">                    <a>Обслуговування медичних закладів</a>                  </li>                </ul>              </li>              <li class="mob-nav__list-item">                <a href="#">Наші проекти</a>              </li>              <li class="mob-nav__list-item">                <a href="#">Про нас</a>              </li>              <li class="mob-nav__list-item">                <a href="#">Новини</a>              </li>              <li class="mob-nav__list-item">                <a href="#">FAQ</a>              </li>              <li class="mob-nav__list-item">                <a href="#">Контакти</a>              </li>            </ul>          </nav>        </div>      </header>      <div class="main-content">        <nav class="container breadcrumbs">          <ol class="list-nostyled breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">              <a href="#" itemprop="item" class="breadcrumbs__link">               <span itemprop="name">Главная</span>              </a>              <meta itemprop="position" content="1">            </li>            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">              <a href="#" itemprop="item" class="breadcrumbs__link">                <span itemprop="name">Страница 1</span>              </a>              <meta itemprop="position" content="2">            </li>            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">              <span class="breadcrumbs__link" aria-current="page">                <span itemprop="name">Страница 2</span>              </span>              <meta itemprop="position" content="3">            </li>          </ol>        </nav>        <main>
-          <div class="container  login-form">
-            <h1 class="visually-hidden">Вхід до кабінету клієнта</h1>
-            <div class="login-form__row  login-form__row--top">
-              <div class="login-form__col">
-                <div class="login-form__container  login-form__container--top">
-                  <div class="row">
-                    <div class="login-form__col-inner">
-                      <div class="login-form__caption">
-                        <p>Увага!</p>
-                        <p>
-                          Змінено номер «гарячої лінії»
-                          <a href="tel:+0633191200">063 319 12 00</a> <br>
-                          <a href="mailto:sd@impelukraine.com.ua">sd@impelukraine.com.ua</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          <article class="container  vacancy-page">
+            <div class="row">
+              <div class="vacancy-page__col-text">
+                <h1 class="vacancy-page__title">Адміністратор операційного відділу</h1>
+                <p class="vacancy-page__intro">Міжнародна сервісна компанія запрошує кандидатів взяти участь у конкурсі на заміщення вакансії Адміністратор операційного відділу</p>
+                <p class="vacancy-page__city">Місто: Київ</p>
+                <h3>Основні обов'язки:</h3>
+                <ul>
+                  <li>Роботи з операційними менеджерами: прийом та закриття заявок, розподіл робіт;</li>
+                  <li>Робота з проблемними заявками, вирішення спірних питань;</li>
+                  <li>Ведення листування із Замовниками, вирішення оперативних питань;</li>
+                  <li>отримання, видача, облік готівкових коштів;</li>
+                  <li>Складання внутрішньої фінансової звітності;</li>
+                  <li>Адміністрацію договорів: контроль термінів, обсягу роботи, контроль звітності;</li>
+                  <li>Прийом зовнішніх дзвінків та зворотний зв'язок на ел. листи.</li>
+                </ul>
+                <h3>Основні вимоги:</h3>
+                <ul>
+                  <li>Роботи з операційними менеджерами: прийом та закриття заявок, розподіл робіт;</li>
+                  <li>Робота з проблемними заявками, вирішення спірних питань;</li>
+                  <li>Ведення листування із Замовниками, вирішення оперативних питань;</li>
+                  <li>отримання, видача, облік готівкових коштів;</li>
+                  <li>Складання внутрішньої фінансової звітності;</li>
+                </ul>
+                <h3>Умови роботи:</h3>
+                <ul>
+                  <li>Офіційне працевлаштування;</li>
+                  <li>Соціальні гарантії згідно з КЗпП;</li>
+                  <li>Компенсаційний пакет;</li>
+                  <li>Навчання усередині компанії;</li>
+                  <li>Можливість кар"єрного росту.</li>
+                </ul>
+                <p><strong>Мы готовы к сотрудничеству с активными людьми, которые любят свою работу!</strong></p>
               </div>
-            </div>
-            <div class="login-form__row">
-              <div class="login-form__col  login-form__col--bottom">
-                <div class="login-form__container  login-form__container--bottom">
-                  <div class="row">
-                    <div class="login-form__col-inner">
-                      <form class="login-form__form" action method="post">
-                        <p class="h2 login-form__form-title">Вхід до Вашого кабінету</p>
-                        <div>                          <label class="field-text">                            <span class="visually-hidden">Логін</span>                            <span class="field-text__input-wrap">                              <input class="field-text__input" type="text" name="login" value placeholder="Логін">                              <span class="field-text__help-text error"></span>                            </span>                          </label>                          <!--DEV                          @ @include('blocks/field-text/field-text.html')                          -->                          <label class="field-text">                            <span class="visually-hidden">Пароль</span>                            <span class="field-text__input-wrap">                              <input class="field-text__input" type="password" name="login" value placeholder="Пароль">                              <span class="field-text__help-text error"></span>                            </span>                          </label>                        </div>
-                        <div class="login-form__restore">
+              <div class="vacancy-page__col-form">
+                <div class="vacancy-page__form">
+                  <section class="contact-block">
+                    <h2 class="visually-hidden">Форма связи</h2>
+                    <p class="h3 contact-block__title">Якщо вас зацікавила вакансія, зв'яжіться з нами по телефону або надішліть резюме</p>
+                    <p class="h3 contact-block__title">
+                      <a href="tel:+380681909111">+38 068 190 91 11</a>
+                    </p>
+                    <form class="contact-block__form" action="#" method="post">
+                      <div>                        <label class="field-text">                          <span class="visually-hidden">Ваше ім'я</span>                          <span class="field-text__input-wrap">                            <input class="field-text__input" type="text" name="login" value placeholder="Ваше ім'я">                            <span class="field-text__help-text error"></span>                          </span>                        </label>                        <!--DEV                        @ @include('blocks/field-text/field-text.html')                        -->                        <label class="field-text">                          <span class="visually-hidden">E-mail</span>                          <span class="field-text__input-wrap">                            <input class="field-text__input" type="email" name="login" value placeholder="E-mail">                            <span class="field-text__help-text error"></span>                          </span>                        </label>                        <!--DEV                        @ @include('blocks/field-text/field-text.html')                        -->                        <label class="field-text">                          <span class="visually-hidden">Телефон</span>                          <span class="field-text__input-wrap">                            <input class="field-text__input" type="tel" name="login" value placeholder="Телефон">                            <span class="field-text__help-text error"></span>                          </span>                        </label>                        <label class="field-text">
+                          <span class="visually-hidden">Повідомлення</span>
+                          <span class="field-text__input-wrap">
+                            <textarea class="field-text__input" name="message" placeholder="Повідомлення"></textarea>
+                            <span class="field-text__help-text error"></span>
+                          </span>
+                        </label>
+                        <div class="contact-block__agreement">
+                          <button class="btn  btn--arrow  btn--arrow--fill" type="submit">Відправити</button>
                           <div class="field-checkbox">
                             <label class="field-checkbox__name">
-                              <input class="field-checkbox__input" type="checkbox" name checked>
-                              <span class="field-checkbox__name-text">Запам'ятати мене</span>
+                              <input class="field-checkbox__input" type="checkbox" name="agreement" checked>
+                              <span class="field-checkbox__name-text">Я згоден на обробку персональних даних відповідно до <a href="#">Політики конфіденційності</a></span>
                             </label>
                           </div>
-                          <a href="password-recovery-page.html" class="login-form__restore-link">Забули пароль?</a>
                         </div>
-                        <div class="login-form__submit-wrapper">
-                          <button class="btn btn--arrow  btn--arrow--fill" type="submit">Увійти</button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
+                      </div>
+                    </form>
+                  </section>
                 </div>
               </div>
             </div>
-          </div>
+          </article>
         </main>
       </div>
     </div>
