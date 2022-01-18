@@ -54,11 +54,14 @@
     "contacts-map": [],
     "vacancies": [],
     "vacancy-page": [],
-    "page-404": []
+    "page-404": [],
+    "gallery": [],
+    "password-recovery": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
+    "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css",
     "../../node_modules/swiper/swiper-bundle.min.css"
   ],
   "addCssAfter": [
@@ -71,6 +74,7 @@
     "./node_modules/swiper/swiper-bundle.min.js",
     "./node_modules/sticky-js/dist/sticky.min.js",
     "./node_modules/jquery/dist/jquery.min.js",
+    "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
     "./src/js/libs/popper.min.js",
     "./node_modules/bootstrap/js/dist/util.js",
     "./node_modules/bootstrap/js/dist/collapse.js",

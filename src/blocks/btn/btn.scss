@@ -110,6 +110,18 @@
       background-color: transparent;
       background-position: right 4px center;
     }
+
+    &--reverse {
+      padding: 0 0 0 36px;
+      //text-align: right;
+      background-position: left 14px center;
+      background-image: svg-load('../blocks/sprite-svg/svg/btn-arrow-left-icon.svg', fill=$main-color);
+
+      &:hover,
+      &:focus {
+        background-position: left 4px center;
+      }
+    }
   }
 
   &--fill {
