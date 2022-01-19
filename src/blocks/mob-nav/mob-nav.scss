@@ -55,7 +55,6 @@
 
         a {
           color: $main-color;
-          pointer-events: none;
         }
       }
     }
@@ -84,9 +83,15 @@
 
     &.active {
 
-      a {
+      & > a {
         color: $main-color;
-        pointer-events: none;
+      }
+    }
+
+    &.active {
+
+      & > #{$block-name}__link-wrapper > a {
+        color: $main-color;
       }
     }
 

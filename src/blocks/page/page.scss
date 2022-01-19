@@ -560,26 +560,29 @@ a {
 
 .tel-link {
   display: inline-flex;
-  position: relative;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 32px;
   font-weight: 500;
   text-decoration: none;
 
-  &::before {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 24px;
-    height: 24px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 20px;
-    background-image: svg-load('../blocks/sprite-svg/svg/call-icon.svg', fill=$text-color);
+  &:first-child {
+    position: relative;
+    padding-left: 32px;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      background-image: svg-load('../blocks/sprite-svg/svg/call-icon.svg', fill=$text-color);
+    }
   }
 }
 
