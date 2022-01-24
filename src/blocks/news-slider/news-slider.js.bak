@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     spaceBetween: 20,
     autoHeight: false,
     loop: true,
-    preloadImages: false,
-    lazy: true,
+    //preloadImages: false,
+    //lazy: true,
 
     breakpoints: {
       320: {

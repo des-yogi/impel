@@ -6,6 +6,7 @@
       {include 'file:chunks/breadcrumbs.tpl'}
     </div>
     <main>
+
       <article class="container  contacts">
         <h1>[[*longtitle:default=`[[*pagetitle]]`]]</h1>
         <div class="row">
@@ -38,68 +39,41 @@
           </div>
         </div>
       </article>
+
       <section class="container  contacts-map">
         <h2 class="visually-hidden">[[$langs? &uk=`Карта` &ru=`Карта` &en=`Map`]]</h2>
         <div class="row">
           <div class="contacts-map__form-col">
             <section class="contact-block">
               <h2 class="contact-block__title">[[$langs? &uk=`Зв'язатися з нами` &ru=`Связаться с нами` &en=`Contact us`]]</h2>
-              <form class="contact-block__form" action="#" method="post">
-                <div>
-                  <label class="field-text">
-                    <span class="visually-hidden">[[$langs? &uk=`Ваше ім'я` &ru=`Ваше имя` &en=`Your name`]]</span>
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="text" name="login" value="" placeholder="[[$langs? &uk=`Ваше ім'я` &ru=`Ваше имя` &en=`Your name`]]">
-                      <span class="field-text__help-text error"></span>
-                    </span>
-                  </label>
-                  <label class="field-text">
-                    <span class="visually-hidden">E-mail</span>
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="email" name="login" value="" placeholder="E-mail">
-                      <span class="field-text__help-text error"></span>
-                    </span>
-                  </label>
-                  <label class="field-text">
-                    <span class="visually-hidden">[[$langs? &uk=`Тема повідомлення` &ru=`Тема сообщения` &en=`The subject`]]</span>
-                    <span class="field-text__input-wrap">
-                          <input class="field-text__input" type="text" name="login" value="" placeholder="[[$langs? &uk=`Тема повідомлення` &ru=`Тема сообщения` &en=`The subject`]]">
-                          <span class="field-text__help-text error"></span>
-                        </span>
-                  </label>
-                  <label class="field-text">
-                    <span class="visually-hidden">[[$langs? &uk=`Повідомлення` &ru=`Сообщение` &en=`Message`]]</span>
-                    <span class="field-text__input-wrap">
-                      <textarea class="field-text__input" name="message" placeholder="[[$langs? &uk=`Повідомлення` &ru=`Сообщение` &en=`Message`]]"></textarea>
-                      <span class="field-text__help-text error"></span>
-                    </span>
-                  </label>
-                  <div class="contact-block__agreement">
-                    <button class="btn  btn--arrow  btn--arrow--fill" type="submit">[[$langs? &uk=`Відправити` &ru=`Отправить` &en=`Submit`]]</button>
-                    <div class="field-checkbox">
-                      <label class="field-checkbox__name">
-                        <input class="field-checkbox__input" type="checkbox" name="agreement" checked>
-                        <span class="field-checkbox__name-text">
-                          [[$langs?
-                          &uk=`Я згоден на обробку персональних даних відповідно до <a href="#">Політики конфіденційності</a>`
-                          &ru=`Я согласен на обработку персональных данных в соответствии с <a href="#">Политикой конфиденциальности</a>`
-                          &en=`I agree to the processing of personal data in accordance with the <a href="#">Privacy Policy</a>`
-                          ]]
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </form>
+              [[!AjaxForm?
+              &snippet=`FormIt`
+              &form=`@FILE: chunks/forms/contact_form.tpl`
+              &emailTpl=`@FILE: chunks/emails/contact_email.tpl`
+              &hooks=`csrfhelper_formit,email`
+              &emailSubject=`[[$langs?
+              &uk=`Повідомлення зі сторінки`
+              &ru=`Сообщение со страницы`
+              &en=`The message from the page`]] [[*longtitle:default=`[[*pagetitle]]`]]`
+              &emailFrom=`office@impelukraine.com.ua`
+              &emailTo=`office@impelukraine.com.ua`
+              &validate=`name:required,email:email:required,message:required:stripTags`
+              &validationErrorMessage=`[[$langs? &uk=`У формі містяться помилки!` &ru=`В форме содержатся ошибки!` &en=`The form contains errors!`]]`
+              &successMessage=`[[$langs? &uk=`Повідомлення успішно відправлено` &ru=`Сообщение успешно отправлено` &en=`Message sent successfully`]]`
+              &vTextRequired=`[[$langs? &uk=`Це поле є обов'язковим` &ru=`Это поле обязательно к заполнению` &en=`This field is required`]]!`
+              &submitVar=`contact-form`
+              &csrfKey=`simple-form`
+              ]]
             </section>
           </div>
           <div class="contacts-map__map-col">
             <div class="contacts-map__map">
-              <iframe class="b-lazy" title="[[$langs? &uk=`Заголовок карти` &ru=`Заголовок карты` &en=`Map Title`]]" data-src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d20323.19674581409!2d30.5252503324148!3d50.452283252041816!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1642421169507!5m2!1sru!2sua" style="border:0;" allowfullscreen loading="lazy"></iframe>
+              <iframe class="b-lazy" title="[[$langs? &uk=`Заголовок карти` &ru=`Заголовок карты` &en=`Map Title`]]" data-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10159.914053429426!2d30.5223326!3d50.4601248!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd57ea21d9ecff6f5!2sImpel%20Ukraine!5e0!3m2!1sen!2sua!4v1642617207897!5m2!1sen!2sua" style="border:0;" allowfullscreen loading="lazy"></iframe>
             </div>
           </div>
         </div>
       </section>
+
     </main>
   </div>
 {/block}
