@@ -37,13 +37,11 @@
   }
 
   &__project-descr {
-
+    margin-top: 48px;
 
     &:empty {
       display: none;
     }
-
-    p {}
   }
 
   &__project-icon {

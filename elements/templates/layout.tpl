@@ -225,9 +225,10 @@
             <section class="page-footer__tel">
               <h4 class="visually-hidden">[[$langs? &uk=`Контактні телефони` &ru=`Контактные телефоны` &en=`Contact telephones`]]:</h4>
               <a href="tel:+[[++tel_sales]]" title="[[$langs? &uk=`Відділ продажу` &ru=`Отдел продаж` &en=`Sales department`]]"><span itemprop="telephone">[[++tel_sales:phone_format]]</span></a>
+              <a href="tel:+[[++tel_hr]]" title="[[$langs? &uk=`Отдел HR` &ru=`Отдел HR` &en=`HR department`]]"><span itemprop="telephone">[[++tel_hr:phone_format]]</span></a>
               <span class="page-footer__tel-caption">[[$langs? &uk=`Гаряча лінія` &ru=`Горячая линия` &en=`Hotline`]]:</span>
               <a href="tel:+[[++tel_hotline]]"><span itemprop="telephone">[[++tel_hotline:phone_format]]</span></a>
-              <a href="tel:+[[++tel_hr]]" title="[[$langs? &uk=`Отдел HR` &ru=`Отдел HR` &en=`HR department`]]"><span itemprop="telephone">[[++tel_hr:phone_format]]</span></a>
+              
             </section>
             <div class="page-footer__email">
               <a href="mailto:[[++email_main]]"><span itemprop="email">[[++email_main]]</span></a>
