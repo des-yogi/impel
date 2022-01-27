@@ -32,8 +32,8 @@
   <link rel="preload" href="assets/fonts/GraphikLCG-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/GraphikLCG-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/GraphikLCG-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="[[!modxMinify?&group=`styles`]]" as="style">
   <link href="[[!modxMinify?&group=`styles`]]" rel="stylesheet" media="screen">
-  {*<link href="assets/css/style.min.css" rel="stylesheet" media="screen">*}
   <style>
     .main-content { margin-top: 82px; }
     @media (min-width: 768px) { .main-content { margin-top: 110px; }}
@@ -78,7 +78,7 @@
               `]]
               <div class="lang-switcher  dropdown">
                 <button id="topLang" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" data-offset="0,8">
-                  <svg width="19.5" height="19.5"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/img/sprite-svg.svg#globe-icon"/></svg>
+                  <svg width="19.5" height="19.5" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/img/sprite-svg.svg#globe-icon"/></svg>
                   <span>
                     <span class="visually-hidden">[[$langs? &uk=`Поточна мова:` &ru=`Текущий язык:` &en=`Current language:`]]</span>
                     [[++cultureKey:is=`uk`:then=`Укр`]]
@@ -98,17 +98,21 @@
         </div>
         <div class="page-header__main">
           <div class="container page-header__main-content">
-            <a [[*template:ne=`1`:then=`href="[[~[[BabelTranslation:default=`1`? &resourceId=`1` &contextKey=`[[*context_key]]`]]]]"`]] class="logo" title="[[++site_name]]">
-              <img src="assets/img/impel-group-logo.svg" alt="[[++site_name]] logo" width="100" height="32">
-            </a>
+             [[*template:ne=`1`:then=`<a href="[[~[[BabelTranslation:default=`1`? &resourceId=`1` &contextKey=`[[*context_key]]`]]]]" class="logo" title="[[++site_name]]">
+              <img src="assets/img/impel-group-logo.svg" alt="[[++site_name]] logo" width="100" height="32" loading="lazy" decoding="async">
+            </a>`:else=`<span class="logo">
+              <img src="assets/img/impel-group-logo.svg" alt="[[++site_name]] logo" width="100" height="32" loading="lazy" decoding="async">
+            </span>`]]
             <nav class="menu  main-nav">
               [[pdoMenu?
               &parents=`0`
               &level=`2`
               &tplOuter=`@INLINE <ul>[[+wrapper]]</ul>`
               &tpl=`@INLINE <li [[+classes]]><a href="[[+link]]">[[+menutitle]]</a></li>`
-              &tplHere=`@INLINE <li [[+classes]]><a>[[+menutitle]]</a></li>`
-              &tplParentRow=`@INLINE <li [[+classes]]><a href="[[+link]]">[[+menutitle]]</a>[[+wrapper]]</li>`
+              &tplHere=`@INLINE <li [[+classes]]><span class="a">[[+menutitle]]</span></li>`
+              &tplParentRow=`@INLINE <li class="menu-dropdown-icon"><a href="[[+link]]">[[+menutitle]]</a>[[+wrapper]]</li>`
+              &tplParentRowHere=`@INLINE <li class="menu-dropdown-icon  active"><span class="a">[[+menutitle]]</span>[[+wrapper]]</li>`
+              &tplParentRowActive=`@INLINE <li class="menu-dropdown-icon  active"><a href="[[+link]]">[[+menutitle]]</a>[[+wrapper]]</li>`
               ]]
             </nav>
             <div class="page-header__main-service">
@@ -119,7 +123,7 @@
               `]]
               <div class="lang-switcher  dropdown">
                 <button id="mainLang" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" data-offset="0,28">
-                  <svg width="19.5" height="19.5"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/img/sprite-svg.svg#globe-icon"/></svg>
+                  <svg width="19.5" height="19.5" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/img/sprite-svg.svg#globe-icon"/></svg>
                   <span>
                     <span class="visually-hidden">[[$langs? &uk=`Поточна мова:` &ru=`Текущий язык:` &en=`Current language:`]]</span>
                       [[++cultureKey:is=`uk`:then=`Укр`]]
@@ -150,26 +154,26 @@
             </div>
             [[pdoMenu?
             &parents=`0`
-            &level=`2` 
+            &level=`2`
             &tplOuter=`@INLINE <ul class="list-nostyled  mob-nav__list">[[+wrapper]]</ul>`
             &tplInner=`@INLINE <ul id="[[+alias]]" class="list-nostyled  mob-nav__sub-list collapse">[[+wrapper]]</ul>`
             &tpl=`@INLINE <li class="mob-nav__list-item"><a href="[[+link]]">[[+menutitle]]</a></li>`
-            &tplHere=`@INLINE <li class="mob-nav__list-item active"><a>[[+menutitle]]</a></li>`
+            &tplHere=`@INLINE <li class="mob-nav__list-item active"><span>[[+menutitle]]</span></li>`
             &tplParentRow=`@INLINE
-            <li class="mob-nav__list-item  has-child">           
+            <li class="mob-nav__list-item  has-child">
               <div class="mob-nav__link-wrapper">
                 <a href="[[+link]]">[[+menutitle]]</a>
                 <button class="mob-nav__submenu-toggle" type="button" data-toggle="collapse" data-target="#[[+alias]]" aria-expanded="false" aria-controls="[[+alias]]">
                   <span class="visually-hidden">[[$langs? &uk=`Відкрити підменю` &ru=`Открыть подменю` &en=`Open submenu`]]</span>
                 </button>
               </div>
-              [[+wrapper]] 
+              [[+wrapper]]
             </li>
             `
             &tplParentRowHere=`@INLINE
             <li class="mob-nav__list-item  has-child  active">
               <div class="mob-nav__link-wrapper">
-                <a>[[+menutitle]]</a>
+                <span>[[+menutitle]]</span>
                 <button class="mob-nav__submenu-toggle" type="button" data-toggle="collapse" data-target="#[[+alias]]" aria-expanded="false" aria-controls="[[+alias]]">
                   <span class="visually-hidden">[[$langs? &uk=`Відкрити підменю` &ru=`Открыть подменю` &en=`Open submenu`]]</span>
                 </button>
@@ -178,7 +182,7 @@
             </li>
             `
             &tplInnerRow=`@INLINE <li class="mob-nav__list-item"><a href="[[+link]]">[[+menutitle]]</a></li>`
-            &tplInnerHere=`@INLINE <li class="mob-nav__list-item  active"><a>[[+menutitle]]</a></li>`
+            &tplInnerHere=`@INLINE <li class="mob-nav__list-item  active"><span>[[+menutitle]]</span></li>`
             ]]
           </nav>
         </div>
@@ -197,25 +201,27 @@
           <meta itemprop="priceRange" content="$$$" />
 
           <div class="page-footer__logo-col">
-            <a [[*template:ne=`1`:then=`href="[[~[[BabelTranslation:default=`1`? &resourceId=`1` &contextKey=`[[*context_key]]`]]]]"`]] class="logo  logo--footer" title="[[++site_name]]">
-              <img itemprop="logo" src="assets/img/impel-group-logo.svg" alt="[[++site_name]] logo" width="100" height="32">
-            </a>
+            [[*template:ne=`1`:then=`<a href="[[~[[BabelTranslation:default=`1`? &resourceId=`1` &contextKey=`[[*context_key]]`]]]]" class="logo  logo--footer" title="[[++site_name]]">
+              <img itemprop="logo" src="assets/img/impel-group-logo.svg" alt="[[++site_name]] logo" width="100" height="32" loading="lazy" decoding="async">
+            </a>`:else=`<span class="logo logo--footer">
+              <img itemprop="logo" src="assets/img/impel-group-logo.svg" alt="[[++site_name]] logo" width="100" height="32" loading="lazy" decoding="async">
+            </span>`]]
           </div>
           <div class="page-footer__menu-col">
             <nav class="page-footer__menu">
-              <h4 class="h5  page-footer__block-title">Меню:</h4>
+              <h2 class="h5  page-footer__block-title">[[$langs? &uk=`Меню` &ru=`Меню` &en=`Menu`]]:</h2>
               [[pdoMenu?
               &parents=`0`
               &level=`1`
               &tplOuter=`@INLINE <ul class="list-nostyled page-footer__menu-list">[[+wrapper]]</ul>`
               &tpl=`@INLINE <li class="page-footer__menu-item"><a href="[[+link]]">[[+menutitle]]</a></li>`
-              &tplHere=`@INLINE <li class="page-footer__menu-item  active"><a>[[+menutitle]]</a></li>`
+              &tplHere=`@INLINE <li class="page-footer__menu-item  active"><span>[[+menutitle]]</span></li>`
               ]]
             </nav>
           </div>
           <div class="page-footer__address-col">
             <section class="page-footer__address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-              <h4 class="h5  page-footer__block-title">[[$langs? &uk=`Адреса` &ru=`Адрес` &en=`Address`]]:</h4>
+              <h2 class="h5  page-footer__block-title">[[$langs? &uk=`Адреса` &ru=`Адрес` &en=`Address`]]:</h2>
               <p>[[++site_name]]</p>
               <p><span itemprop="streetAddress">[[++streetAddress]]</span></p>
               <p><span itemprop="postalCode">[[++postalCode]],</span> <span itemprop="addressLocality">[[++addressLocality]]</span></p>
@@ -223,20 +229,19 @@
           </div>
           <div class="page-footer__tel-col">
             <section class="page-footer__tel">
-              <h4 class="visually-hidden">[[$langs? &uk=`Контактні телефони` &ru=`Контактные телефоны` &en=`Contact telephones`]]:</h4>
+              <h2 class="visually-hidden">[[$langs? &uk=`Контактні телефони` &ru=`Контактные телефоны` &en=`Contact phones`]]:</h2>
               <a href="tel:+[[++tel_sales]]" title="[[$langs? &uk=`Відділ продажу` &ru=`Отдел продаж` &en=`Sales department`]]"><span itemprop="telephone">[[++tel_sales:phone_format]]</span></a>
               <a href="tel:+[[++tel_hr]]" title="[[$langs? &uk=`Отдел HR` &ru=`Отдел HR` &en=`HR department`]]"><span itemprop="telephone">[[++tel_hr:phone_format]]</span></a>
-              <span class="page-footer__tel-caption">[[$langs? &uk=`Гаряча лінія` &ru=`Горячая линия` &en=`Hotline`]]:</span>
+              <span class="page-footer__tel-caption">[[$langs? &uk=`Номер для мережевих клієнтів` &ru=`Номер для сетевых клиентов` &en=`Phone number for clients`]]:</span>
               <a href="tel:+[[++tel_hotline]]"><span itemprop="telephone">[[++tel_hotline:phone_format]]</span></a>
-              
             </section>
             <div class="page-footer__email">
               <a href="mailto:[[++email_main]]"><span itemprop="email">[[++email_main]]</span></a>
             </div>
           </div>
           <div class="page-footer__social-col">
-              {include 'file:chunks/social_network.tpl'}
-            </div>
+            {include 'file:chunks/social_network.tpl'}
+          </div>
         </div>
         <div class="row page-footer__bottom">
           <div class="page-footer__copyrights-col">
@@ -256,8 +261,33 @@
       </footer>
     </div>
   </div>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->
-   <script src="assets/js/script.min.js"></script>
+  <script src="assets/js/script.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+  <script>
+    setTimeout(function () {
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#f1f1f5",
+            "text": "#0b1c31"
+          },
+          "button": {
+            "background": "#d8001a"
+          }
+        },
+        "theme": "classic",
+        "position": "bottom-left",
+        "type": "opt-out",
+        "content": {
+          "message": "<span style='display:block;margin:0 0 0.3em;font-weight:bold;'>[[$langs? &uk=`Ми використовуємо файли cookie, щоб було зручніше користуватися нашим сайтом` &ru=`Мы используем файлы cookie, чтобы было удобнее пользоваться нашим сайтом` &en=`We use cookies to make our site easier to use`]].</span><span style='font-size:14px;'>[[$langs? &uk=`Продовжуючи перегляд, ви погоджуєтеся на використання файлів cookie. Детальну інформацію ви можете отримати за посиланням` &ru=`Продолжая просмотр, вы соглашаетесь использовать файлы cookie. Подробную информацию вы можете получить по ссылке` &en=`By continuing to browse, you agree to the use of cookies. Detailed information can be found at the link`]]. </span>",
+          "allow": "[[$langs? &uk=`Дозволити` &ru=`Разрешить` &en=`Allow`]]",
+          "deny": "[[$langs? &uk=`Відхилити` &ru=`Отклонить` &en=`Decline`]]",
+          "link": "[[$langs? &uk=`Детальніше` &ru=`Детальнее` &en=`Read more`]]",
+          "href": "[[~[[BabelTranslation:default=`20`? &resourceId=`20` &contextKey=`[[*context_key]]`]]]]"
+        }
+      });
+    }, 10000);
+  </script>
 </body>
 </html>
   
