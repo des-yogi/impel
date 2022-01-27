@@ -53,12 +53,14 @@
 
       &.active {
 
+        span,
         a {
           color: $main-color;
         }
       }
     }
 
+    span,
     a {
       display: inline-block;
       vertical-align: baseline;
@@ -83,18 +85,21 @@
 
     &.active {
 
-      & > a {
+      & > a,
+      & > span {
         color: $main-color;
       }
     }
 
     &.active {
 
-      & > #{$block-name}__link-wrapper > a {
+      & > #{$block-name}__link-wrapper > a,
+      & > #{$block-name}__link-wrapper > span {
         color: $main-color;
       }
     }
 
+    span,
     a {
       font-weight: 600;
       text-decoration: none;
@@ -123,6 +128,7 @@
       }
     }
 
+    span,
     a {
       font-weight: initial;
     }
@@ -133,7 +139,7 @@
     width: 100%;
     padding-right: 60px;
 
-    a {
+    span, a {
       margin-left: 60px;
     }
   }

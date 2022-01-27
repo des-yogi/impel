@@ -6,6 +6,12 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  // a {
+  //   display: inline-block;
+  //   vertical-align: baseline;
+  //   padding: 0.5em 0;
+  // }
+
   &__bottom {
     font-size: 14px;
     text-align: center;
@@ -101,11 +107,12 @@
   &__menu-item {
 
     & + & {
-      margin-top: 4px;
+      margin-top: 0.5em;
     }
 
     &.active {
 
+      span,
       a {
         color: $main-color;
         pointer-events: none;
@@ -121,7 +128,7 @@
     }
 
     p + p {
-      margin-top: 4px;
+      margin-top: 0.5em;
     }
   }
 
@@ -150,7 +157,7 @@
     }
 
     a + a {
-      margin-top: 4px;
+      margin-top: 0.5em;
     }
   }
 
@@ -173,7 +180,7 @@
 
   &__tel-caption {
     display: block;
-    margin-top: 8px;
+    margin-top: 0.5em;
     font-size: $font-size-sm;
     font-weight: initial;
   }

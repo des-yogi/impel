@@ -1,6 +1,7 @@
 .menu-dropdown-icon {
 
-  & > a {
+  & > a,
+  & > .a {
     position: relative;
     padding-right: 36px !important;
 
@@ -53,10 +54,11 @@
   background: transparent;
   transition: .2s ease-in-out;
 
-  &.active > a {
+  &.active > a,
+  &.active > span {
     //color: $main-color;
     background-color: $white;
-    pointer-events: none;
+    //pointer-events: none;
 
     &::before {
       background-image: svg-load('../blocks/sprite-svg/svg/caret-down-icon.svg', fill=$main-color);
@@ -64,6 +66,7 @@
   }
 }
 .menu > ul > li a,
+.menu > ul > li .a,
 .menu-mobile {
   display: flex;
   align-items: center;
@@ -113,7 +116,8 @@
   background: none;
   float: left;
 }
-.menu > ul > li > ul > li a {
+.menu > ul > li > ul > li a,
+.menu > ul > li > ul > li .a {
   padding: 10px;
   display: block;
   //border-bottom: 1px solid #337AB7;
@@ -142,7 +146,8 @@
   width: 100%;
   margin: 0;
 }
-.menu > ul > li > ul > li > ul > li a {
+.menu > ul > li > ul > li > ul > li a,
+.menu > ul > li > ul > li > ul > li .a {
   border: 0;
   padding: 10px 12px;
   font-size: 18px;
@@ -159,12 +164,14 @@
 .menu > ul > li > ul.normal-sub > li {
   width: 100%;
 
-  &.active > a {
+  &.active > a,
+  &.active > span {
     color: $main-color;
     pointer-events: none;
   }
 }
-.menu > ul > li > ul.normal-sub > li a {
+.menu > ul > li > ul.normal-sub > li a,
+.menu > ul > li > ul.normal-sub > li .a {
   padding: 8px 0;
   line-height: 1.2;
   border: 0;
